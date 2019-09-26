@@ -23,26 +23,11 @@
 
 <body>
   <!-- NAVIGATION -->
-  <nav class="navbar  navbar-expand navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="home.html">Home </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Perfil.html">Perfil</a>
-          </li>
-      </ul >
-      <ul class="navbar-nav mr-auto" id="login">
-          <li class="nav-item active">
-            <a href="Login.html"><button type="button" class="btn">Login</button></a>
-          </li>
-          <li class="nav-item active">
-            <a href="Registro.html"><button type="button" class="btn">Registro</button></a>
-          </li>
-      </ul>
-    </div>
-  </nav>
+  
+  <?php
+    
+    include_once("navbar.php");
+    ?>
 
 <!-- JUEGO  -->
     <div class="container text-center">

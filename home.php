@@ -35,30 +35,35 @@
 
   <body>
     <!-- NAVIGATION -->
-    <nav class="navbar  navbar-expand navbar-light bg-light mb-100">
+   <!--  <nav class="navbar  navbar-expand navbar-light bg-light mb-100">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="home.html">Home </a>
+            <a class="nav-link" href="home.php">Home </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Perfil.html">Perfil</a>
+            <a class="nav-link" href="Perfil.php">Perfil</a>
           </li>
         </ul>
         <ul class="navbar-nav mr-auto" id="login">
           <li class="nav-item active">
-            <a href="Login.html"
+            <a href="Login.php"
               ><button type="button" class="btn">Login</button></a
             >
           </li>
           <li class="nav-item active">
-            <a href="Registro.html"
+            <a href="Registro.php"
               ><button type="button" class="btn">Registro</button></a
             >
           </li>
         </ul>
       </div>
     </nav>
+ -->
+ <?php
+    
+    include_once("navbar.php");
+    ?>
 
     <div class="container position-relative">
       <img src="img/cerebro.png" class="brain position-absolute" alt="..." />
