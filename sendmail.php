@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,3 +64,6 @@
     </article>
 </body>
 </html>
+=======
+<h1>ACA VA EL FORMULARIO DE CONTACTO</h1>
+>>>>>>> 407fc03e799213f6a7422c27183e136eceee41b2
