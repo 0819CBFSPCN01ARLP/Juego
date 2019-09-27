@@ -21,6 +21,3 @@
   </div>
   </nav>
 </header>
-
-
-//header, main y footer .
