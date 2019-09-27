@@ -19,7 +19,7 @@ include_once("scripts.php");
         Su informacion ha sido satisfactoriamente guardada!
       </div>
       <div>
-        <a href="home.html"
+        <a href="home.php"
           ><button type="button" class="btn btn-link">
             Volver a Inicio
           </button></a>
