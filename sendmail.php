@@ -1,38 +1,35 @@
-<?php
-require_once("controller.php");
-var_dump($_POST);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registry</title>
-  <?php
-  include_once("scripts.php");
-  ?>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <?php
+    include_once("scripts.php");
+    ?>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
-  <body>
+<body>
     <!-- NAVIGATION -->
     <?php
 
     include_once("navbar.php");
     ?>
-    <article>
-      <section class="container col-sm-10 col-md-8 ">
-        <h1 class="h2 text-center my-5">Formulario de registro</h1>
+
+<article>
+      <section class="container col-8 mt-5">
+        
         <form
-          action="Registro.php"
+          action="sendmail.php"
           method="post"
           name="formulario"
           id="formulario"
           autocomplete="off"
+          
         >
           <fieldset>
-            <div class="form-group col-sm-12 ">
+            <div class="form-group col-12 ">
               <label>Nombre</label>
               <input
                 type="text"
@@ -43,7 +40,7 @@ var_dump($_POST);
                 required
               />
             </div>
-            <div class="form-group col-sm-12">
+            <div class="form-group col-12">
               <label>Correo Electronico</label>
               <input
                 type="email"
@@ -53,23 +50,16 @@ var_dump($_POST);
                 placeholder="tucorreo@example.com"
                 required/>
             </div>
-            <div class="form-group col-sm-12">
-              <label>Contraseña</label>
-              <input
-                type="password"
-                id="contra"
-                name="password"
-                class="form-control"
-                placeholder="6 a 8 caracteres"
-                required/>
+            <div class="form-group">
+              <textarea name="textarea" id="textarea" cols="90" rows="10" class="col-8 ml-3" placeholder="Escriba aqui, su consulta"></textarea>
             </div>
             <br />
             <div class="text-center pb-2">
-              <button type="submit" class="btn">Registrarse</button>
+              <button type="submit" class="btn">Enviar</button>
             </div>
           </fieldset>
         </form>
       </section>
     </article>
-  </body>
+</body>
 </html>

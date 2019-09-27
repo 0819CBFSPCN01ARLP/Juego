@@ -35,9 +35,9 @@ require_once("./controller.php");
             <input type="submit" class="button" value="Login" />
           </div>
           <br />
-          <a href="Registro.html">Don't have an account?</a>
+          <a href="Registro.php">Don't have an account?</a>
           <br />
-          <a href="sendmail.html">Forgot your password?</a>
+          <a href="sendmail.php">Forgot your password?</a>
         </form>
       </div>
     </div>
