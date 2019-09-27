@@ -1,5 +1,6 @@
 <?php
-require_once("./controller.php");
+require_once("controller.php");
+var_dump($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ require_once("./controller.php");
       <section class="container col-sm-10 col-md-8 ">
         <h1 class="h2 text-center my-5">Formulario de registro</h1>
         <form
-          action="el-qlo-d-tu-gfa.php"
+          action="Registro.php"
           method="post"
           name="formulario"
           id="formulario"
@@ -57,14 +58,14 @@ require_once("./controller.php");
               <input
                 type="password"
                 id="contra"
-                name="contra"
+                name="password"
                 class="form-control"
                 placeholder="6 a 8 caracteres"
                 required/>
             </div>
             <br />
             <div class="text-center pb-2">
-              <a href="#"><button type="button" class="btn">Registrarse</button></a>
+              <button type="submit" class="btn">Registrarse</button>
             </div>
           </fieldset>
         </form>
