@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7af9cde19b5c1866b76b27b571ace015f313717e
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,4 +66,11 @@
       </section>
     </article>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+=======
+<h1>ACA VA EL FORMULARIO DE CONTACTO</h1>
+>>>>>>> 407fc03e799213f6a7422c27183e136eceee41b2
+>>>>>>> 7af9cde19b5c1866b76b27b571ace015f313717e
