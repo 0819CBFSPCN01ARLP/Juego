@@ -95,7 +95,7 @@ img.VF {
   margin-top: 0;
 }
 /* LOGIN Y REGISTRO*/
-.button:hover {
+.button-login:hover {
   color: white;
   font-size: 20vh;
   text-decoration: underline;
@@ -169,7 +169,7 @@ label {
   color: white;
   font-size: 12px;
 }
-.button {
+.button-login {
   border: none;
   outline: none;
   height: 35px;
@@ -507,7 +507,7 @@ label {
     color: white;
     font-size: 12px;
   }
-  .button {
+  .button-login {
     border: none;
     outline: none;
     height: 35px;
