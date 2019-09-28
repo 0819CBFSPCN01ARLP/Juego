@@ -1,6 +1,6 @@
 <?php
-require_once("controller.php");
-var_dump($_POST);
+require_once("./partials/controller.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ var_dump($_POST);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registry</title>
   <?php
-  include_once("scripts.php");
+  include_once("./partials/scripts.php");
   ?>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +19,7 @@ var_dump($_POST);
     <!-- NAVIGATION -->
     <?php
 
-    include_once("navbar.php");
+    include_once("./partials/navbar.php");
     ?>
     <article>
       <section class="container col-sm-10 col-md-8 ">

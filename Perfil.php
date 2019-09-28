@@ -1,5 +1,5 @@
 <?php
-require_once("./controller.php");
+require_once("./partials/controller.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +9,14 @@ require_once("./controller.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
     <?php
-    include_once("scripts.php");
+    include_once("./partials/scripts.php");
     ?>
     <link rel="stylesheet" href="./css/perfil.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
     <?php
-    include_once("navbar.php");
+    include_once("./partials/navbar.php");
     ?>
     <div class="container text-center col-12" id="puntaje">
       <img src="./img/hombre.jpg" alt="" />

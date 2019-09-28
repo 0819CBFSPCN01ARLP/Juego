@@ -1,5 +1,5 @@
 <?php
-require_once("./controller.php");
+require_once("./partials/controller.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +9,14 @@ require_once("./controller.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <?php
-    include_once("scripts.php");
+    include_once("./partials/scripts.php");
     ?>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- NAVIGATION -->
     <?php
-    include_once("navbar.php");
+    include_once("./partials/navbar.php");
     ?>
     <div class="container class-md-8 ">
       <div class="login-box text-center mt-4">
@@ -32,12 +32,12 @@ require_once("./controller.php");
             <input type="password" class="password" />
           </div>
           <div>
-            <input type="submit" class="button" value="Login" />
+            <input type="submit" class="button-login" value="Login" />
           </div>
           <br />
-          <a href="Registro.php">Don't have an account?</a>
+          <a href="registro.php">Don't have an account?</a>
           <br />
-          <a href="sendmail.php">Forgot your password?</a>
+          <a href="contacto.php">Forgot your password?</a>
         </form>
       </div>
     </div>

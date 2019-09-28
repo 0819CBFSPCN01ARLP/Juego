@@ -97,7 +97,7 @@ img.VF {
 /* LOGIN Y REGISTRO*/
 .button-login:hover {
   color: white;
-  font-size: 20vh;
+  font-size: 20px;
   text-decoration: underline;
 }
 .login-box a {
@@ -519,4 +519,27 @@ label {
   .alert {
     font-size: 1.2em;
   }
+}
+
+/* FAQ */
+
+.card {
+  background-color: #3da8a8;
+}
+
+.btn-preguntas {
+  background-color: #fa4f4f;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+
+.card-body {
+  color: white;
+  background-color: #fa4f4f;
+}
+
+.card-container {
+  background-color: #fa4f4f;
 }

@@ -1,6 +1,5 @@
 <?php
 // NOMBRE: SI ESTA VACIO O NO
-<<<<<<< HEAD
 
 function validarNombre() {
 
@@ -58,35 +57,3 @@ function validarUsername() {
 
 ?>
 
-=======
-
-function validarNombre() {
-
-  if (strlen($_POST["nombre"]) == 0) {
-
-    return false;
-
-  } else {
-
-    return true;
-
-  }
-
-}
-
-function validarUsername() {
-
-    if (strlen($_POST["password"])<8){
-    
-      return ;
-    
-    } else {
-    
-      return true;
-    
-    }
-    
-    }
-
-?>
->>>>>>> 7af9cde19b5c1866b76b27b571ace015f313717e
