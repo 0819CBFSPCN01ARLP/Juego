@@ -1,31 +1,25 @@
 <?php
 require_once("./partials/controller.php");
 
+  $titulo= "Registry";
+  $css="style";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registry</title>
-  <?php
-  include_once("./partials/scripts.php");
-  ?>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
+<?php
+include_once("./partials/head.php");
+?>
   <body>
     <!-- NAVIGATION -->
     <?php
-
     include_once("./partials/navbar.php");
     ?>
     <article>
       <section class="container col-sm-10 col-md-8 ">
         <h1 class="h2 text-center my-5">Formulario de registro</h1>
         <form
-          action="Registro.php"
+          action="registro.php"
           method="post"
           name="formulario"
           id="formulario"

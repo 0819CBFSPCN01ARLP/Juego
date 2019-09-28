@@ -1,18 +1,15 @@
 <?php
 require_once("./partials/controller.php");
+
+  $titulo= "Login";
+  $css="style";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <?php
-    include_once("./partials/scripts.php");
-    ?>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<?php
+include_once("./partials/head.php");
+?>
   <body>
     <!-- NAVIGATION -->
     <?php
@@ -22,7 +19,7 @@ require_once("./partials/controller.php");
       <div class="login-box text-center mt-4">
         <img class="avatar mx-auto" src="./img/hombre.jpg" alt="" />
         <h3>Login Here</h3>
-        <form>
+        <form action="login.php" method="post">
           <div>
             <label for="username">Username</label>
             <input type="text" class="username" />
@@ -32,7 +29,7 @@ require_once("./partials/controller.php");
             <input type="password" class="password" />
           </div>
           <div>
-            <input type="submit" class="button-login" value="Login" />
+            <input type="submit" class="button-login" value="login" />
           </div>
           <br />
           <a href="registro.php">Don't have an account?</a>

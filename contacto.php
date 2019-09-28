@@ -1,15 +1,13 @@
+<?php
+  $titulo= "Document";
+  $css="style";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <?php
-    include_once("./partials/scripts.php");
-    ?>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+<?php
+include_once("./partials/head.php");
+?>
 <body>
     <!-- NAVIGATION -->
     <?php
@@ -19,14 +17,13 @@
 
 <article>
       <section class="container col-8 mt-5">
-        
+
         <form
           action="contacto.php"
           method="post"
           name="formulario"
           id="formulario"
           autocomplete="off"
-          
         >
           <fieldset>
             <div class="form-group col-12 ">

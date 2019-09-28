@@ -1,19 +1,17 @@
 <?php
 require_once("./controller.php");
+
+  $titulo= "Thanks!";
+  $css="style";
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thanks!</title>
 <?php
-include_once("scripts.php");
+include_once("./partials/head.php");
 ?>
-<link rel="stylesheet" href="css/style.css">
-</head>
-  <body>
+<body>
     <div class="container">
       <div class="alert alert-success" role="alert">
         Su informacion ha sido satisfactoriamente guardada!
