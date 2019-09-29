@@ -1,5 +1,5 @@
 <?php
-require_once("controller.php");
+require_once("./partials/controller.php");
 
   $titulo= "Playing";
   $css="style";
@@ -11,10 +11,10 @@ require_once("controller.php");
 include_once("./partials/head.php");
 ?>
 <body>
-  <!-- NAVIGATION -->
-  <?php
-    include_once("navbar.php");
-    ?>
+<!-- NAVIGATION -->
+<?php
+include_once("./partials/navbar.php");
+?>
 <!-- JUEGO  -->
     <div class="container text-center">
       <section class="seccion">

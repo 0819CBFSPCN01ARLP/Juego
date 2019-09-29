@@ -9,10 +9,10 @@
 include_once("./partials/head.php");
 ?>
   <body>
-    <!-- NAVIGATION -->
-    <?php
-    include_once("./partials/navbar.php");
-    ?>
+<!-- NAVIGATION -->
+<?php
+include_once("./partials/navbar.php");
+?>
     <div class="accordion ml-3 mt-5 col-10" id="accordionExample">
       <div class="card-container">
     <div class="card-header" id="headingOne">

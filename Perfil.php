@@ -16,7 +16,7 @@ include_once("./partials/head.php");
     include_once("./partials/navbar.php");
     ?>
     <div class="container text-center col-12" id="puntaje">
-      <img src="./img/hombre.jpg" alt="" />
+      <img src="./img/hombre.jpg" alt="" class="col-2"/>
       <div class="card text-center">
         <div class="card-header">
           Puntaje de Usuario BlaBlaBla

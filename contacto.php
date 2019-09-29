@@ -1,5 +1,5 @@
 <?php
-  $titulo= "Document";
+  $titulo= "Contact";
   $css="style";
 ?>
 
@@ -9,15 +9,13 @@
 include_once("./partials/head.php");
 ?>
 <body>
-    <!-- NAVIGATION -->
-    <?php
-
-    include_once("./partials/navbar.php");
-    ?>
+<!-- NAVIGATION -->
+<?php
+include_once("./partials/navbar.php");
+?>
 
 <article>
       <section class="container col-8 mt-5">
-
         <form
           action="contacto.php"
           method="post"

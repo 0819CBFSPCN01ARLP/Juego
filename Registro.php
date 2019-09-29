@@ -16,15 +16,16 @@ include_once("./partials/head.php");
     include_once("./partials/navbar.php");
     ?>
     <article>
-      <section class="container col-sm-10 col-md-8 ">
-        <h1 class="h2 text-center my-5">Formulario de registro</h1>
-        <form
-          action="registro.php"
-          method="post"
-          name="formulario"
-          id="formulario"
-          autocomplete="off"
-        >
+          <section class="container col-sm-10 col-md-8 ">
+            <h1 class="h2 text-center my-5">Formulario de registro</h1>
+            <form
+              action="registro.php"
+              method="post"
+              name="formulario"
+              id="formulario"
+              autocomplete="off"
+              enctype="multipart/form-data"
+            >
           <fieldset>
             <div class="form-group col-sm-12 ">
               <label>Nombre</label>
@@ -55,11 +56,16 @@ include_once("./partials/head.php");
                 name="password"
                 class="form-control"
                 placeholder="6 a 8 caracteres"
-                required/>
+                required/> <br/>
+              <label>Foto de Perfil</label> <br/>
+                <input
+                  type="file"
+                  name="avatar"
+                  required/>
             </div>
             <br />
             <div class="text-center pb-2">
-              <button type="submit" class="btn">Registrarse</button>
+              <button type="submit" class="btn" >Registrarse</button>
             </div>
           </fieldset>
         </form>

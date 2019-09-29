@@ -11,11 +11,10 @@ include_once("./partials/head.php");
 <body>
     <!-- NAVIGATION -->
     <?php
-    include_once("navbar.php");
+    include_once("./partials/navbar.php");
     ?>
 <article>
       <section class="container col-8 mt-5">
-
         <form
           action="sendmail.php"
           method="post"

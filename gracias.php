@@ -1,10 +1,7 @@
 <?php
-require_once("./controller.php");
-
   $titulo= "Thanks!";
   $css="style";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +9,9 @@ require_once("./controller.php");
 include_once("./partials/head.php");
 ?>
 <body>
+<?php
+  include_once("./partials/navbar.php");
+  ?>
     <div class="container">
       <div class="alert alert-success" role="alert">
         Su informacion ha sido satisfactoriamente guardada!
