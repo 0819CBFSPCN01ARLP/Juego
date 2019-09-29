@@ -2,7 +2,7 @@
 require_once("./partials/controller.php");
 
   $titulo= "Profile";
-  $css="perfil";
+  $css="style";  
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ include_once("./partials/head.php");
     <?php
     include_once("./partials/navbar.php");
     ?>
-    <div class="container text-center col-12" id="puntaje">
+    <div class="container text-center col-12 mt-5" id="puntaje">
       <img src="./img/hombre.jpg" alt="" class="col-2"/>
       <div class="card text-center">
         <div class="card-header">
