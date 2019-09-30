@@ -1,8 +1,7 @@
 <?php
 require_once("./partials/controller.php");
-
   $titulo= "Home | Juego de Preguntas y Respuestas";
-  $css="main";
+  $css="home";
 ?>
 
 <!DOCTYPE html>
@@ -15,16 +14,18 @@ include_once("./partials/head.php");
 <?php
   include_once("./partials/navbar.php");
   ?>
-  <div class="container position-relative">
+  <!-- MAIN -->
+  <div class="container position-relative col-lg-11">
     <a href="jugar.php">
     <img src="img/cerebro.png" class="brain position-absolute" alt="..." />
     </a>
-    <div class="row mb-3">
-      <div class="col-md-6 col-sm-6 col-xs-6 is-true">
-        <img src="img/verdadero.png" class="true rounded float-left" alt="" />
+        <div class="row mb-3">
+      <div class="is-true col-lg-5">
+        <img src="img/verdadero.png" class="true rounded" alt="" />
       </div>
-      <div class="col-md-6 col-sm-6 col-xs-6 is-false">
-        <img src="img/falso.png" class="false float-right" alt="" />
+      <div class="is-false col-lg-5">
+        <h5>Comienza a jugar</h5>
+        <img src="img/falso.png" class="false" alt="" />
       </div>
     </div>
   </div>
