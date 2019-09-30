@@ -16,7 +16,7 @@ include_once("./partials/head.php");
     include_once("./partials/navbar.php");
     ?>
     <div class="container class-md-8 ">
-      <div class="login-box text-center mt-4">
+      <div class="login-box text-center mx-auto">
         <img class="avatar mx-auto" src="./img/hombre.jpg" alt="" />
         <h3>Login Here</h3>
         <form action="login.php" method="post">
@@ -29,7 +29,7 @@ include_once("./partials/head.php");
             <input type="password" class="password" />
           </div>
           <div>
-            <input type="submit" class="button-login" value="login" />
+            <input type="submit" class="button-login" value="Login" />
           </div>
           <br />
           <a href="registro.php">Don't have an account?</a>

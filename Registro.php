@@ -1,7 +1,8 @@
 <?php
 require_once("./partials/controller.php");
+ 
 
-  $titulo= "Registry";
+  $titulo= "Register";
   $css="style";
 ?>
 
@@ -16,7 +17,7 @@ include_once("./partials/head.php");
     include_once("./partials/navbar.php");
     ?>
     <article>
-          <section class="container col-sm-10 col-md-8 ">
+          <section class="container col-sm-10 col-md-8">
             <h1 class="h2 text-center my-5">Formulario de registro</h1>
             <form
               action="registro.php"
@@ -55,7 +56,7 @@ include_once("./partials/head.php");
                 id="contra"
                 name="password"
                 class="form-control"
-                placeholder="6 a 8 caracteres"
+                placeholder="Al menos 8 caracteres"
                 required/> <br/>
               <label>Foto de Perfil</label> <br/>
                 <input
