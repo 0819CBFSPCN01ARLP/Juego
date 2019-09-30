@@ -30,5 +30,9 @@
       crossorigin="anonymous"
     ></script>
 
+     <!-- LINK DE FONT AWESOME -->
+
+     <script src="https://kit.fontawesome.com/dbe1c31697.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./css/<?= $css ?>.css">
 </head>

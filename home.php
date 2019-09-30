@@ -28,6 +28,6 @@ include_once("./partials/head.php");
         <img src="img/falso.png" class="false" alt="" />
       </div>
     </div>
-  </div>
+  </div> 
 </body>
 </html>
