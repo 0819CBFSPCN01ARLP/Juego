@@ -23,7 +23,7 @@ include_once("./partials/head.php");
     ?>
     <article>
           <section class="container col-sm-10 col-md-8">
-            <h1 class="h2 text-center my-5">Formulario de registro</h1>
+            <h1 class="h2 text-center my-4">Formulario de registro</h1>
             <form
               action="validacion.php"
               method="post"
@@ -71,11 +71,12 @@ include_once("./partials/head.php");
                 <input
                   type="file"
                   name="avatar"
-                  />
-            </div>
-            <br />
+                  />           
+              <br /><br>
             <div class="text-center pb-2">
               <button type="submit" class="btn" >Registrarse</button>
+              <h6 style="color:white" class="mt-3">Recordarme</h6>
+              <input type="checkbox" name="recordarme" class="mt-3 mb-0">              
             </div>
           </fieldset>
         </form>

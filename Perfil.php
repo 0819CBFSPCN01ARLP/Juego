@@ -28,7 +28,7 @@ include_once("./partials/head.php");
           <h5>
             Puntaje total...150000
           </h5>
-          <a href="home.html" class="btn">Volver a inicio</a>
+          <a href="home.php" class="btn">Volver a inicio</a>
         </div>
       </div>
     </div>
