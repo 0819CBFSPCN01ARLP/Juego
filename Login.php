@@ -30,11 +30,19 @@ include_once("./partials/head.php");
           </div>
           <div>
             <input type="submit" class="button-login" value="Login" />
-          </div>
-          <br />
+          </div>          
           <a href="registro.php">Don't have an account?</a>
-          <br />
+          <br>          
           <a href="contacto.php">Forgot your password?</a>
+          <br>
+          <div class="checkbox mt-2">
+            <div class="col-6 float-right">
+              <input type="checkbox" name="recordarme">
+            </div>
+            <div class="col-6 float-right">
+              <h6 class="ml-5">Recordarme</h6>
+            </div>             
+          </div>
         </form>
       </div>
     </div>
