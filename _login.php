@@ -1,12 +1,20 @@
 <?php
 
+$data = $_POST;
 
-$usuarios = file_get_contents("usuarios.json");
- $usuarios = json_decode(file_get_contents("usuarios.json"), true);
+$usuarios = json_decode(fopen('usuarios.json', 'r'));
 var_dump($usuarios);
 exit;
 
-header('Location: Login.php');
+
+
+
+if (password_verify('rasmuslerdorf', $hash)) {
+    echo '¡La contraseña es válida!';
+} else {
+    echo 'La contraseña no es válida.';
+}
+
 
 
 

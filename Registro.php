@@ -1,11 +1,11 @@
 <?php
   require_once("./partials/controller.php");
-  session_start();
-  if (!empty($_SESSION["errores"])){
-    foreach ($_SESSION["errores"] as $key => $error) {
-      echo $error["mensaje"] ."<br/>";
-    }
-  }
+  // session_start();
+  // if (!empty($_SESSION["errores"])){
+  //   foreach ($_SESSION["errores"] as $key => $error) {
+  //     echo $error["mensaje"] ."<br/>";
+  //   }
+  // }
 
   $titulo= "Register";
   $css="style";
@@ -31,6 +31,7 @@ include_once("./partials/head.php");
               id="formulario"
               autocomplete="off"
               enctype="multipart/form-data"
+              required
             >
           <fieldset>
             <div class="form-group col-sm-12 ">
@@ -41,6 +42,7 @@ include_once("./partials/head.php");
                 name="nombre"
                 class="form-control"
                 placeholder="Escribe tu nombre"
+                required
 
               />
             </div>
@@ -52,6 +54,7 @@ include_once("./partials/head.php");
                 name="email"
                 class="form-control"
                 placeholder="tucorreo@example.com"
+                required
                 />
             </div>
             <div class="form-group col-sm-12">
@@ -62,6 +65,7 @@ include_once("./partials/head.php");
                 name="password"
                 class="form-control"
                 placeholder="Al menos 8 caracteres"
+                required
                 /> <br/>
               <label>Foto de Perfil</label> <br/>
                 <input
