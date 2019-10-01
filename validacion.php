@@ -53,9 +53,9 @@ foreach ($data as $key => $input){
          $usuariosArray = json_decode($usuarios, true);
          $usuariosArray [] = $usuario;
          $usuariosFinal = json_encode($usuariosArray);
-         fopen ("usuarios.json", "w");
+  //       fopen ("usuarios.json", "w");
          file_put_contents("usuarios.json", $usuariosFinal);
-         echo "Usuario creado con éxito, en breve será redireccionado al Login"
+         echo "Usuario creado con éxito, en breve será redireccionado al Login";
          header('refresh: 10; url=Login.php');
 
     }

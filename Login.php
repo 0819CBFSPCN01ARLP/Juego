@@ -22,27 +22,19 @@ include_once("./partials/head.php");
         <form action="_login.php" method="post">
           <div>
             <label for="username">Username</label>
-            <input type="text" class="username" />
+            <input type="text" name="nombre" class="username" />
           </div>
           <div>
             <label for="password">Password</label>
-            <input type="password" class="password" />
+            <input type="password" name="password" class="password" />
           </div>
           <div>
             <input type="submit" class="button-login" value="Login" />
-          </div>          
-          <a href="registro.php">Don't have an account?</a>
-          <br>          
-          <a href="contacto.php">Forgot your password?</a>
-          <br>
-          <div class="checkbox mt-2">
-            <div class="col-6 float-right">
-              <input type="checkbox" name="recordarme">
-            </div>
-            <div class="col-6 float-right">
-              <h6 class="ml-5">Recordarme</h6>
-            </div>             
           </div>
+          <br />
+          <a href="registro.php">Don't have an account?</a>
+          <br />
+          <a href="contacto.php">Forgot your password?</a>
         </form>
       </div>
     </div>
