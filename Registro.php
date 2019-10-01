@@ -1,6 +1,11 @@
 <?php
-require_once("./partials/controller.php");
- 
+  require_once("./partials/controller.php");
+  session_start();
+  if (!empty($_SESSION["errores"])){
+    foreach ($_SESSION["errores"] as $key => $error) {
+      echo $error["mensaje"] ."<br/>";
+    }
+  }
 
   $titulo= "Register";
   $css="style";
@@ -20,7 +25,7 @@ include_once("./partials/head.php");
           <section class="container col-sm-10 col-md-8">
             <h1 class="h2 text-center my-5">Formulario de registro</h1>
             <form
-              action="registro.php"
+              action="validacion.php"
               method="post"
               name="formulario"
               id="formulario"
@@ -36,18 +41,18 @@ include_once("./partials/head.php");
                 name="nombre"
                 class="form-control"
                 placeholder="Escribe tu nombre"
-                required
+
               />
             </div>
             <div class="form-group col-sm-12">
               <label>Correo Electronico</label>
               <input
-                type="email"
+                type="text"
                 id="email"
                 name="email"
                 class="form-control"
                 placeholder="tucorreo@example.com"
-                required/>
+                />
             </div>
             <div class="form-group col-sm-12">
               <label>Contraseña</label>
@@ -57,12 +62,12 @@ include_once("./partials/head.php");
                 name="password"
                 class="form-control"
                 placeholder="Al menos 8 caracteres"
-                required/> <br/>
+                /> <br/>
               <label>Foto de Perfil</label> <br/>
                 <input
                   type="file"
                   name="avatar"
-                  required/>
+                  />
             </div>
             <br />
             <div class="text-center pb-2">

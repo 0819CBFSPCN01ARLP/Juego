@@ -19,7 +19,7 @@ include_once("./partials/head.php");
       <div class="login-box text-center mx-auto">
         <img class="avatar mx-auto" src="./img/hombre.jpg" alt="" />
         <h3>Login Here</h3>
-        <form action="login.php" method="post">
+        <form action="_login.php" method="post">
           <div>
             <label for="username">Username</label>
             <input type="text" class="username" />
