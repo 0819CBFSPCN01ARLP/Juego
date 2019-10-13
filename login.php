@@ -1,8 +1,42 @@
 <?php
-require_once("./partials/controller.php");
-
+// VARIABLES TITULO Y ARCHIVO CSS
   $titulo= "Login";
   $css="style";
+// VALIDACION DE DATOS DE LOGIN
+  $nombre= ""; //nombre vacio para persistencia
+
+
+  if ($_POST){
+    // primero corroboramos que no esten vacios(si lo esta, no entra a las llaves)
+    if (($_POST["nombre"]!=null) && ($_POST["nombre"]!=null)) {
+
+  // despues traemos los usuarios del json y validamos
+  $usuariosExistentes=file_get_contents("usuarios.json");
+  $arrayDeUsuarios=json_decode($usuariosExistentes,true);
+
+  foreach ($arrayDeUsuarios as $usuario) {
+
+    if($_POST["nombre"] == $usuario["nombre"]){
+      $nombre= $_POST["nombre"]; // persiste el nombre
+      if(password_verify($_POST["password"], $usuario['password'])){
+        header('Location: home.php');
+        exit;
+      } else {echo'<script type="text/javascript">
+        alert("verifique su contraseña");
+        window.location.href="login.php";
+        </script>';}
+    }
+  }
+  echo'<script type="text/javascript">
+        alert("no existe el usuario");
+        window.location.href="login.php";
+        </script>';
+  }
+  echo'<script type="text/javascript">
+    alert("debe completar los campos");
+    window.location.href="login.php";
+    </script>';
+  }
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +45,6 @@ require_once("./partials/controller.php");
 include_once("./partials/head.php");
 ?>
   <body>
-    <!-- NAVIGATION -->
     <?php
     include_once("./partials/navbar.php");
     ?>
@@ -19,10 +52,10 @@ include_once("./partials/head.php");
       <div class="login-box text-center mx-auto">
         <img class="avatar mx-auto" src="./img/hombre.jpg" alt="" />
         <h3>Login Here</h3>
-        <form action="_login.php" method="post">
+        <form action="" method="post">
           <div>
             <label for="username">Username</label>
-            <input type="text" name="nombre" class="username" />
+            <input type="text" name="nombre" class="username" value="<?=$nombre?>"/>
           </div>
           <div>
             <label for="password">Password</label>
