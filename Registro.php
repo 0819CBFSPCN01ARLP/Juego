@@ -1,11 +1,55 @@
 <?php
-  require_once("./partials/controller.php");
+  //require_once("./partials/controller.php");
   // session_start();
   // if (!empty($_SESSION["errores"])){
   //   foreach ($_SESSION["errores"] as $key => $error) {
   //     echo $error["mensaje"] ."<br/>";
   //   }
   // }
+  function validarRegistro(){
+    $errores = [];
+
+    //LLENANDO ARRAYS
+    $name = trim($_POST["name"]); 
+    $mail = trim($_POST["mail"]); 
+    $pass = trim($_POST["pass"]); 
+    
+     
+
+    //SI NOMBRE ESTA VACIO, CREO UNA POSICION CON EL TEXTO A MOSTRAR
+    if(empty($name)){
+      $errores["errorName"] = "El campo Nombre esta vacio";
+    } 
+    if(empty($mail)){
+      $errores["errorMail"] = "El campo Correo Electronico esta vacio";
+    } 
+    if(empty($pass)){
+        $errores["errorPass"] = "El campo Contraseña esta vacio";
+      } 
+    return $errores;     
+
+  }  
+    
+
+    //SI VINO INFORMACION POR POST. SINO VIENE NADA, TIRA FALSE, CASO CONTRARIO, TIRA TRUE
+    if ($_POST) {
+      //VARIABLES PARA PERSISTIR
+      $name = trim($_POST["name"]); 
+      $mail = trim($_POST["mail"]); 
+       
+      //VARIABLE PARA GUARDA LA FUNCION QUE TRAER EL ARRAY DE ERRORES
+      $erroresRegistro = validarRegistro();
+     
+      if (count($erroresRegistro) == 0) {
+        header("location: home.php");
+        exit;
+      }
+      
+    }
+      
+    
+    
+
 
   $titulo= "Register";
   $css="style";
@@ -20,18 +64,27 @@ include_once("./partials/head.php");
     <!-- NAVIGATION -->
     <?php
     include_once("./partials/navbar.php");
+    
+  
     ?>
+    <?php if (isset($erroresRegistro) && count($erroresRegistro)) : ?>
+    <ul>
+      <?php foreach ($erroresRegistro as $unError) : ?>
+      <li><?= $unError?></li>
+  <?php endforeach;?>
+    </ul>
+  <?php endif;?>
     <article>
           <section class="container col-sm-10 col-md-8">
             <h1 class="h2 text-center my-4">Formulario de registro</h1>
             <form
-              action="validacion.php"
+              action=""
               method="post"
               name="formulario"
               id="formulario"
               autocomplete="off"
               enctype="multipart/form-data"
-              required
+              
             >
           <fieldset>
             <div class="form-group col-sm-12 ">
@@ -39,10 +92,12 @@ include_once("./partials/head.php");
               <input
                 type="text"
                 id="nombre"
-                name="nombre"
+                name="name"
                 class="form-control"
                 placeholder="Escribe tu nombre"
-                required
+                value="<?php echo isset($name) ? $name : null ?>"
+                
+                
 
               />
             </div>
@@ -51,21 +106,23 @@ include_once("./partials/head.php");
               <input
                 type="text"
                 id="email"
-                name="email"
+                name="mail"
                 class="form-control"
                 placeholder="tucorreo@example.com"
-                required
+                value="<?php echo isset($mail) ? $mail : null ?>"
+                
                 />
             </div>
             <div class="form-group col-sm-12">
               <label>Contraseña</label>
               <input
                 type="password"
-                id="contra"
-                name="password"
+                id="pass"
+                name="pass"
                 class="form-control"
                 placeholder="Al menos 8 caracteres"
-                required
+               
+                
                 /> <br/>
               <label>Foto de Perfil</label> <br/>
                 <input
