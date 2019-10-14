@@ -8,7 +8,7 @@
 
   if ($_POST){
     // primero corroboramos que no esten vacios(si lo esta, no entra a las llaves)
-    if (($_POST["nombre"]!=null) && ($_POST["nombre"]!=null)) {
+    if (($_POST["nombre"]!=null) && ($_POST["password"]!=null)) {
 
   // despues traemos los usuarios del json y validamos
   $usuariosExistentes=file_get_contents("usuarios.json");
@@ -18,7 +18,7 @@
 
     if($_POST["nombre"] == $usuario["nombre"]){
       $nombre= $_POST["nombre"]; // persiste el nombre
-      if(password_verify($_POST["password"], $usuario['password'])){
+      if(password_verify($_POST["password"], $usuario["password"])){
         header('Location: home.php');
         exit;
       } else {echo'<script type="text/javascript">
