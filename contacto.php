@@ -46,7 +46,7 @@ include_once("./partials/navbar.php");
                 required/>
             </div>
             <div class="form-group">
-              <textarea name="textarea" id="textarea" cols="135" rows="10" class="ml-3 mt-3" placeholder="Escriba aqui, su consulta" required></textarea>
+              <textarea name="textarea" id="textarea" cols="90" rows="5" class="ml-3 mt-3" placeholder="Escriba aqui, su consulta" required></textarea>
             </div>
             <br />
             <div class="text-center pb-2">

@@ -1,5 +1,4 @@
 <?php
-require_once("./partials/controller.php");
   $titulo= "Home | Juego de Preguntas y Respuestas";
   $css="home";
 ?>
@@ -28,6 +27,6 @@ include_once("./partials/head.php");
         <img src="img/falso.png" class="false" alt="" />
       </div>
     </div>
-  </div> 
+  </div>
 </body>
 </html>

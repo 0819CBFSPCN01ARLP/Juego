@@ -10,39 +10,39 @@
     $errores = [];
 
     //LLENANDO ARRAYS
-    $name = trim($_POST["name"]); 
-    $mail = trim($_POST["mail"]); 
-    $pass = trim($_POST["pass"]); 
-    
-     
+    $name = trim($_POST["name"]);
+    $mail = trim($_POST["mail"]);
+    $pass = trim($_POST["pass"]);
+
+
 
     //SI NOMBRE ESTA VACIO, CREO UNA POSICION CON EL TEXTO A MOSTRAR
     if(empty($name)){
       $errores["errorName"] = "El campo Nombre esta vacio";
-    } 
+    }
     if(empty($mail)){
       $errores["errorMail"] = "El campo Correo Electronico esta vacio";
-    } 
+    }
     if(empty($pass)){
         $errores["errorPass"] = "El campo Contraseña esta vacio";
-      } 
-    return $errores;     
+      }
+    return $errores;
 
-  }  
-    
+  }
+
 
     //SI VINO INFORMACION POR POST. SINO VIENE NADA, TIRA FALSE, CASO CONTRARIO, TIRA TRUE
     if ($_POST) {
       //VARIABLES PARA PERSISTIR
-      $name = trim($_POST["name"]); 
-      $mail = trim($_POST["mail"]); 
-       
+      $name = trim($_POST["name"]);
+      $mail = trim($_POST["mail"]);
+
       //VARIABLE PARA GUARDA LA FUNCION QUE TRAER EL ARRAY DE ERRORES
       $erroresRegistro = validarRegistro();
-     
+
       if (count($erroresRegistro) == 0) {
         $usuariosArray = array ();
-      $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+      $hash = password_hash($_POST["pass"], PASSWORD_DEFAULT);
       $usuario = [
          "mail" => $_POST["mail"],
          "name" => $_POST["name"],
@@ -59,12 +59,8 @@
         header("location: home.php");
         exit;
       }
-      
-    }
-      
-    
-    
 
+    }
 
   $titulo= "Register";
   $css="style";
@@ -79,8 +75,8 @@ include_once("./partials/head.php");
     <!-- NAVIGATION -->
     <?php
     include_once("./partials/navbar.php");
-    
-  
+
+
     ?>
     <?php if (isset($erroresRegistro) && count($erroresRegistro)) : ?>
     <ul>
@@ -99,7 +95,7 @@ include_once("./partials/head.php");
               id="formulario"
               autocomplete="off"
               enctype="multipart/form-data"
-              
+
             >
           <fieldset>
             <div class="form-group col-sm-12 ">
@@ -111,10 +107,7 @@ include_once("./partials/head.php");
                 class="form-control"
                 placeholder="Escribe tu nombre"
                 value="<?php echo isset($name) ? $name : null ?>"
-                
-                
-
-              />
+            />
             </div>
             <div class="form-group col-sm-12">
               <label>Correo Electronico</label>
@@ -125,7 +118,7 @@ include_once("./partials/head.php");
                 class="form-control"
                 placeholder="tucorreo@example.com"
                 value="<?php echo isset($mail) ? $mail : null ?>"
-                
+
                 />
             </div>
             <div class="form-group col-sm-12">
@@ -136,19 +129,18 @@ include_once("./partials/head.php");
                 name="pass"
                 class="form-control"
                 placeholder="Al menos 8 caracteres"
-               
-                
+                 
                 /> <br/>
               <label>Foto de Perfil</label> <br/>
                 <input
                   type="file"
                   name="avatar"
-                  />           
+                  />
               <br /><br>
             <div class="text-center pb-2">
               <button type="submit" class="btn" >Registrarse</button>
               <h6 style="color:white" class="mt-3">Recordarme</h6>
-              <input type="checkbox" name="recordarme" class="mt-3 mb-0">              
+              <input type="checkbox" name="recordarme" class="mt-3 mb-0">
             </div>
           </fieldset>
         </form>

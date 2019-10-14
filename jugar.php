@@ -1,6 +1,4 @@
 <?php
-require_once("./partials/controller.php");
-
   $titulo= "Playing";
   $css="style";
 ?>

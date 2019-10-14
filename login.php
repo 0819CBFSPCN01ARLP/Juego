@@ -8,7 +8,7 @@
 
   if ($_POST){
     // primero corroboramos que no esten vacios(si lo esta, no entra a las llaves)
-    if (($_POST["nombre"]!=null) && ($_POST["password"]!=null)) {
+    if (($_POST["name"]!=null) && ($_POST["pass"]!=null)) {
 
   // despues traemos los usuarios del json y validamos
   $usuariosExistentes=file_get_contents("usuarios.json");
@@ -16,9 +16,9 @@
 
   foreach ($arrayDeUsuarios as $usuario) {
 
-    if($_POST["nombre"] == $usuario["nombre"]){
-      $nombre= $_POST["nombre"]; // persiste el nombre
-      if(password_verify($_POST["password"], $usuario["password"])){
+    if($_POST["name"] == $usuario["name"]){
+      $nombre= $_POST["name"]; // persiste el nombre
+      if(password_verify($_POST["pass"], $usuario["pass"])){
         header('Location: home.php');
         exit;
       } else {echo'<script type="text/javascript">
@@ -55,11 +55,11 @@ include_once("./partials/head.php");
         <form action="" method="post">
           <div>
             <label for="username">Username</label>
-            <input type="text" name="nombre" class="username" value="<?=$nombre?>"/>
+            <input type="text" name="name" class="username" value="<?=$nombre?>"/>
           </div>
           <div>
             <label for="password">Password</label>
-            <input type="password" name="password" class="password" />
+            <input type="password" name="pass" class="password" />
           </div>
           <div>
             <input type="submit" class="button-login" value="Login" />
