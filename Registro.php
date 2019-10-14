@@ -41,6 +41,21 @@
       $erroresRegistro = validarRegistro();
      
       if (count($erroresRegistro) == 0) {
+        $usuariosArray = array ();
+      $hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+      $usuario = [
+         "mail" => $_POST["mail"],
+         "name" => $_POST["name"],
+         "pass" => $hash,
+         ];
+
+
+         $usuarios = file_get_contents("usuarios.json");
+         $usuariosArray = json_decode($usuarios, true);
+         $usuariosArray [] = $usuario;
+         $usuariosFinal = json_encode($usuariosArray);
+  //       fopen ("usuarios.json", "w");
+         file_put_contents("usuarios.json", $usuariosFinal);
         header("location: home.php");
         exit;
       }
