@@ -1,0 +1,124 @@
+@media only screen and (min-width: 300px) {
+/* TODAS */
+  body {
+    background-color: #3da8a8;
+    overflow: hidden;
+}
+/* NAVIGATION */
+  .navbar {
+    background-color: #fa4f4f !important;
+    height: 10vh;
+    margin-bottom: 5vh;
+  }
+  .nav-link {
+    color: white !important;
+    font-size: 2.5vh;
+  }
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  .dropdown-item {
+    font-size: 2.5vh;
+  }
+/* HOME */
+  .brain {
+    position: absolute;
+    z-index: 1;
+    width: 70vw;
+    left: 15vw;
+    top: 25vh;
+  }
+  .is-false {
+    height: 40vh;
+    background-color: #f52853;
+    border-radius: 0 0 10% 10%;
+    width: 90vw;
+    margin-left: 5vw;
+  }
+  .is-true {
+    height: 40vh;
+    background-color: #2dcc70;
+    border-radius: 10% 10% 0 0;
+    width: 90vw;
+    margin-left: 5vw;
+  }
+  .true {
+    margin-top: 10vh;
+    width: 78vw;
+    margin-left: 6vw;
+  }
+  h5{
+    color: white;
+    margin-top: 12vh;
+    margin-left: 20vw;
+  }
+  .false {
+    margin-top: 5vh;
+    width: 42vw;
+    margin-left: 23vw;
+  }
+}
+
+  @media only screen and (min-width: 700px) {
+  /* HOME */
+  .brain {
+    width: 50vw;
+    left: 25vw;
+  }
+  .is-false, .is-true {
+    width: 85vw;
+    margin-left: 5vw;
+  }
+  .true {
+    width: 60vw;
+    margin-left: 13vw;
+  }
+  h5{
+  font-size: 2em;
+  margin-left: 25vw;
+  }
+  .false {
+    width: 35vw;
+    margin-left: 26vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+/* NAVIGATION */
+.nav-link {
+  font-size: 3vh;
+}
+/* HOME */
+.brain {
+  width: 25vw;
+  left: 30vw;
+}
+/* divs de fondo*/
+.is-false {
+  height: 75vh;
+  border-radius: 0 10% 10% 0;
+  margin: 0;
+}
+.is-true {
+  height: 75vh;
+  border-radius: 10% 0 0 10%;
+  margin: 0vw;
+  margin-left: 5vw;
+}
+/* textos verdadero y falso*/
+.true {
+  width: 30vw;
+  margin: 10vh 4vw;
+}
+h5{
+display:none;
+}
+.false {
+  width: 16vw;
+  margin: 58vh 12vw;
+}
+}
+
+
+-----------------------------------------------------
+/* IMAGEN DEL HOME Y BOTON JUGAR */
