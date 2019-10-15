@@ -26,13 +26,13 @@
     if(empty($pass)){
         $errores["errorPass"] = "El campo Contraseña esta vacio";
       }
-    if (!(empty($mail))) {
-      $condition1 = strpos($mail, '@');;
-      $condition2= strpos($mail, '.');;
+    if (!(empty($mail))){
+      $condition1= filter_var($_POST["mail"],FILTER_VALIDATE_EMAIL) == false;
+      $condition2= $_POST["mail"]!=null;
       if ($condition1 == true && $condition2 == true) {
-        $errores["errorMail"] = "Formato de Correo Electronico, no valido";
+        $errores["errorMail"] = "Formato Correo Electronico incorrecto";
       }      
-    } 
+    }
     return $errores;
 
   }
