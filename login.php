@@ -6,6 +6,7 @@
   $nombre= ""; //nombre vacio para persistencia
 
 
+
   if ($_POST){
     // primero corroboramos que no esten vacios(si lo esta, no entra a las llaves)
     if (($_POST["name"]!=null) && ($_POST["pass"]!=null)) {
@@ -19,7 +20,7 @@
     if($_POST["name"] == $usuario["name"]){
       $nombre= $_POST["name"]; // persiste el nombre
       if(password_verify($_POST["pass"], $usuario["pass"])){
-        header('Location: home.php');
+        header('Location: homeLogueado.php');
         exit;
       } else {echo'<script type="text/javascript">
         alert("verifique su contraseña");
@@ -63,8 +64,12 @@ include_once("./partials/head.php");
           </div>
           <div>
             <input type="submit" class="button-login" value="Login" />
-          </div>
-          <br />
+          </div>         
+          <div>
+          <label class="mb-2">
+            <input class="form-check-input" name="recordarme" type="checkbox" id="recordarme">
+            Recordarme
+          </label>
           <a href="registro.php">Don't have an account?</a>
           <br />
           <a href="contacto.php">Forgot your password?</a>
