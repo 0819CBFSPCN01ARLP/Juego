@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-image: url("/img/cerebro-lila.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.play {
+  height: 150px;
+}
+
+.text-center {
+  margin-top: 35vh;
+}
+
+.nav-item {
+  color: white !important;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
