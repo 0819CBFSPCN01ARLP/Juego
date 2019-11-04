@@ -4,15 +4,14 @@
 }
 
 body {
-  background-image: url("/img/cerebro-lila.jpg");
+  margin: 0;
+  padding: 0;
+  background-image: url("/img/desktop.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-}
-
-.play {
-  height: 150px;
+  height: 100vh;
 }
 
 .text-center {
