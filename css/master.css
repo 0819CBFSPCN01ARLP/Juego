@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/img/desktop.JPG");
+  background-image: url("../img/desktop.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -24,4 +24,20 @@ body {
 
 .nav-item:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 575.98px) {
+  .play {
+    max-width: 100%;
+    height: 15vh;
+    margin-left: 17vw;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .play {
+    max-width: 100%;
+    height: 15vh;
+    margin-left: 19vw;
+  }
 }

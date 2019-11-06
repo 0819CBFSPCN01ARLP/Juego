@@ -22,13 +22,6 @@ h4 {
   max-width: 480px;
 }
 
-.true,
-.false {
-  max-width: 480px;
-  min-width: 250px;
-  margin-right: 50%;
-}
-
 @media (max-width: 575.98px) {
   h1 {
     font-size: 30px;

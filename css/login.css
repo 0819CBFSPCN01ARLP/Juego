@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/img/desktop.JPG");
+  background-image: url("../img/desktop.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -37,13 +37,11 @@ label {
 }
 .login-box {
   width: 320px;
-  height: 420px;
+  height: 450px;
   background: rgba(67, 50, 255, 0.4);
   color: white;
-  top: 60vh;
-  left: 50vw;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  margin-top: 10vh;
+  margin-left: 25vw;
   box-sizing: border-box;
   padding: 60px 40px;
 }
@@ -105,4 +103,14 @@ label {
   height: 75px;
   width: 50%;
   border-radius: 50%;
+}
+
+span {
+  display: block;
+}
+
+@media (max-width: 575.98px) {
+  .login-box {
+    margin-left: 3vw;
+  }
 }

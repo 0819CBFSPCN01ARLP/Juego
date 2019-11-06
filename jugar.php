@@ -39,7 +39,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/master.css" />
-    <link rel="stylesheet" href="css/contacto.css" />
+    <link rel="stylesheet" href="css/jugar.css" />
   </head>
   <body>
     <header>
@@ -57,65 +57,42 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="index.html">Home </a>
-            <a class="nav-item nav-link" href="perfil.html">Perfil</a>
-            <a class="nav-item nav-link" href="FAQ.html">FAQ</a>
+            <a class="nav-item nav-link" href="index.php">Home </a>
+            <a class="nav-item nav-link" href="perfil.php">Perfil</a>
+            <a class="nav-item nav-link" href="FAQ.php">FAQ</a>
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="login.html">Login </a>
-            <a class="nav-item nav-link" href="registro.html">Registrarse</a>
-            <a class="nav-item nav-link" href="contacto.html">Contacto</a>
-            <a class="nav-item nav-link" href="login.html">Logout</a>
+            <a class="nav-item nav-link" href="login.php">Login </a>
+            <a class="nav-item nav-link" href="registro.php">Registrarse</a>
+            <a class="nav-item nav-link" href="contacto.php">Contacto</a>
           </div>
         </div>
       </nav>
     </header>
-    <section class="container col-8 mt-5">
-      <form
-        action="contacto.html"
-        method="post"
-        name="formulario"
-        id="formulario"
-        autocomplete="off"
-      >
-        <div class="form-group col-12 ">
-          <label>Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            class="form-control"
-            placeholder="Escribe tu nombre"
-            required
-          />
-        </div>
-        <div class="form-group col-12">
-          <label>Correo Electronico</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="tucorreo@example.com"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <textarea
-            name="textarea"
-            id="textarea"
-            cols="90"
-            rows="5"
-            placeholder="Escriba aqui, su consulta"
-            required
-          ></textarea>
-        </div>
-        <div class="text-center mt-5 pb-3">
-          <button type="submit" class="btn">Enviar</button>
-        </div>
-      </form>
-    </section>
+    <!-- JUEGO  -->
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-6"><h1 class="float-left">Puntaje</h1></div>   
+        <div class="col-6"><h1 class="float-right">Tiempo</h1></div>
+      </div>
+    </div>
+    <!-- preguntas  -->
+    
+      <div class="m-auto preguntas">
+        <h4 class="text-align-center">EL AGUA HIERVE A 95 GRADOS</h4>
+      </div>   
+    
+     
+      <!-- botones -->
+      <div class="m-auto">
+        <button class="btn btn-success btn-lg btn-block true m-auto" style="">VERDADERO</button>
+        <br>
+        <button class="btn btn-danger btn-lg btn btn-block false m-auto">FALSO</button>
+      </div>
+    </div>
   </body>
 </html>
+          
+   
