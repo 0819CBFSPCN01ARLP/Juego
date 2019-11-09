@@ -1,6 +1,16 @@
 <?php
+require_once("funciones.php");
+
+if (!empty($_POST)){
+	$errores = validateRegisterForm();
+
+	if (empty($errores)){
+		$datos = sanitizeRegisterForm();
+		registerUser($datos);
+		header("Location: login.php");
+	}
+}
   $titulo= "Register";
-  $css="master";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +25,7 @@
       <!-- NAVIGATION -->
     <?php  include_once("partials/navbar.php");?>
     </header>
-      <section class="container col-lg-8 col-md-8 col-sm-8 login-box">
-        <h1 class="h2 text-center my-4">Formulario de registro</h1>
+      <section class="container col-lg-8 col-md-8 col-sm-8 login-box mt-5">
         <form
           action=""
           method="post"
@@ -28,46 +37,48 @@
         >
       <fieldset>
         <div class="form-group col-sm-12 ">
-          <label>Nombre</label>
-          <input
-            type="text"
-            id="nombre"
-            name="name"
-            class="form-control"
-            placeholder="Escribe tu nombre"/>
+          <label>Username</label>
+          <input type="text" id="nombre" name="name" class="form-control" placeholder="write your name"
+            value="<?php if($_POST && !isset($errores["name"])) echo $_POST["name"]?>" required/>
+
+            <!-- DEVOLUCION ERROR NOMBRE-->
+            <?php if(isset($errores["name"])):?>
+              <p class="form-text alert-hide">
+                <?=$errores["name"]?>
+              </p>
+            <?php endif;?>
+
         </div>
         <div class="form-group col-sm-12">
-          <label>Correo Electronico</label>
-          <input
-            type="text"
-            id="email"
-            name="mail"
-            class="form-control"
-            placeholder="tucorreo@example.com"/>
+          <label>Email</label>
+          <input type="text" id="email" name="mail" class="form-control" placeholder="your-email@example.com"
+          value="<?php if($_POST && !isset($errores["mail"])) echo $_POST["mail"]?>" required/>
+
+            <!-- DEVOLUCION ERROR EMAIL-->
+          <?php if(isset($errores["mail"])):?>
+            <p class="form-text alert-hide">
+              <?=$errores["mail"]?>
+            </p>
+          <?php endif;?>
+
         </div>
         <div class="form-group col-sm-12">
-          <label>Contraseña</label>
-          <input
-            type="password"
-            id="pass"
-            name="pass"
-            class="form-control"
-            placeholder="Al menos 8 caracteres"
-             
-            /> <br/>
-          <label>Foto de Perfil</label> <br/>
-            <input
-              type="file"
-              name="avatar"
-              />
-          <div class="text-center mt-4">
-          <button type="submit" class="btn" >Registrarse</button>
-          <br>
-          <span style="color:white">Recordarme</span> 
-          <input type="checkbox" name="recordarme" class="mt-3 mb-0" style="color:white">
+          <label>Password</label>
+          <input type="password" id="pass" name="pass" class="form-control" placeholder="not less than 6 characters" required/>
+
+            <!-- DEVOLUCION ERROR PASSWORD-->
+          <?php if(isset($errores["pass"])):?>
+            <p class="form-text alert-hide">
+              <?=$errores["pass"]?>
+            </p>
+          <?php endif;?>
+          <label>Picture</label>
+            <input type="file" name="avatar" />
+          <div class="text-center mt-1">
+          <button type="submit" class="btn" >Register me</button>
         </div>
         </fieldset>
       </form>
-      </section>  
+      </section>
   </body>
 </html>

@@ -1,6 +1,14 @@
 <?php
+require_once("funciones.php");
+
+if(!$_SESSION){
+  header("Location: login.php");
+} else {
+$user = getLoggedUser();
+$user["name"]= ucwords($user["name"]); //primer letra mayuscula
+}
+
   $titulo= "Ranking";
-  $css="master";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +29,7 @@
     >
       <div class="card text-center">
         <div class="card-header" style="font-weight:bold">
-          Puntaje de Usuario Frula
+          <?=$user["name"];?> score: 
         </div>
         <div class="row mb-1">
           <div class="col-6">Frula</div>

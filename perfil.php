@@ -1,6 +1,14 @@
 <?php
+require_once("funciones.php");
+
+if(!$_SESSION){
+  header("Location: login.php");
+} else {
+$user = getLoggedUser();
+$user["name"]= ucwords($user["name"]); //primer letra mayuscula
+}
+
   $titulo= "Profile";
-  $css="master";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,30 +29,29 @@
     >
       <div class="card text-center">
         <div class="card-header user-img" style="font-weight:bold">
-          <img src="img/hombre.jpg" alt="" />
-          Puntaje de Usuario Frula
+          <img src="<?=$user["file"]; ?>" alt="" />
+          <?=$user["name"];?> total score:
         </div>
         <div class="card-body">
-          <h5 class="card-title">Frula, esta semana has sumado 5000 puntos!</h5>
+          <h5 class="card-title">Congratulation <?=$user["name"];?>!!,this week you added 5000 points!</h5>
           <div>
             <a href="index.php
-            " class="btn mt-2 mb-2 abm">Volver a inicio</a>
+            " class="btn mt-2 mb-2 abm">Return to main page</a>
           </div>
           <div>
             <a href="tabla.php
-            " class="btn mb-2 abm">Ver Tabla General</a>
+              " class="btn mb-2 abm">Go to the ranking</a>
           </div>
           <div>
             <a href="registro.php
-            " class="btn mb-2 abm">Nuevo Usuario</a>
+            " class="btn mb-2 abm">New User</a>
           </div>
           <div>
-            <a href="perfil.php
-            " class="btn abm">Modificar Usuario</a>
+            <a href="edition.php
+            " class="btn abm">Edit user</a>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
-

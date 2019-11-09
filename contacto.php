@@ -1,6 +1,6 @@
 <?php
+  require_once("funciones.php");
   $titulo= "Contact";
-  $css="master";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@
       <!-- NAVIGATION -->
     <?php  include_once("partials/navbar.php");?>
     </header>
-    <section class="container col-8 mt-5">
+    <section class="container col-12 col-md-8 mt-5">
       <form
         action="contacto.html"
         method="post"
@@ -24,24 +24,24 @@
         autocomplete="off"
       >
         <div class="form-group col-12 ">
-          <label>Nombre</label>
+          <label>Name</label>
           <input
             type="text"
             id="nombre"
             name="nombre"
             class="form-control"
-            placeholder="Escribe tu nombre"
+            placeholder="write your name"
             required
           />
         </div>
         <div class="form-group col-12">
-          <label>Correo Electronico</label>
+          <label>Email</label>
           <input
             type="email"
             id="email"
             name="email"
             class="form-control"
-            placeholder="tucorreo@example.com"
+            placeholder="your-email@example.com"
             required
           />
         </div>
@@ -50,13 +50,13 @@
             name="textarea"
             id="textarea"
             cols="90"
-            rows="5"
-            placeholder="Escriba aqui, su consulta"
+            rows="4"
+            placeholder="write your consult here"
             required
           ></textarea>
         </div>
-        <div class="text-center mt-5 pb-3">
-          <button type="submit" class="btn">Enviar</button>
+        <div class="text-center mt-1 pb-3">
+          <button type="submit" class="btn">Send</button>
         </div>
       </form>
     </section>

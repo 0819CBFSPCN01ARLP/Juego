@@ -1,7 +1,13 @@
 <?php
+require_once("funciones.php");
+
+if($_SESSION){
+$user = getLoggedUser();
+$user["name"]= ucwords($user["name"]); //primer letra mayuscula
+}
   $titulo= "Home | Juego de Preguntas y Respuestas";
-  $css="master";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,13 +19,14 @@
   <body>
      <!-- NAVIGATION -->
     <?php  include_once("partials/navbar.php");?>
-    
-    <div class="container play">
-      <div class="row text-center">
-        <a href="jugar.php"
-          ><img src="img/Play_Button.png" class="play" alt="..."
-        /></a>
-      </div>
-    </div>
+<div class="text-center">
+  <h4>Welcome<?php if($_SESSION){echo " ".$user["name"];}?>!! click here to start your game! </h4>
+<br>
+</div>
+<a href="jugar.php">
+  <img src="img/Play_Button.png" class="play" alt="..."/>
+</a>
+      <!-- <div class="text-center"> -->
+      <!-- </div> -->
   </body>
 </html>

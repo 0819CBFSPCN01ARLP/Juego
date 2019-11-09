@@ -1,6 +1,6 @@
 <?php
+  require_once("funciones.php");
   $titulo= "FAQ";
-  $css="master";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      
+
         <div class="card-header" id="headingTwo">
           <h2 class="mb-0">
             <button
@@ -87,8 +87,8 @@
             sustainable VHS.
           </div>
         </div>
-      
-      
+
+
         <div class="card-header" id="headingThree">
           <h2 class="mb-0">
             <button

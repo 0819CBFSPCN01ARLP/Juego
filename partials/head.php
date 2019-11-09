@@ -35,4 +35,4 @@
       src="https://kit.fontawesome.com/dbe1c31697.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/<?= $css ?>.css" />
+      <link rel="stylesheet" href="css/master.css" />
