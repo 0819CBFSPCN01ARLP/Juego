@@ -5,7 +5,9 @@ if(!$_SESSION){
   header("Location: login.php");
 } else {
 $user = getLoggedUser();
-$user["name"]= ucwords($user["name"]); //primer letra mayuscula
+}
+if($user["id"]!=0){
+  header("Location:login.php");
 }
 
   $titulo= "ABM";
@@ -29,44 +31,38 @@ $user["name"]= ucwords($user["name"]); //primer letra mayuscula
     >
       <div class="card text-center">
         <div class="card-header" style="font-weight:bold">
-          Administrador de Preguntas:
+
+          Question manager:
         </div>
         <div class="row mb-1">
-          <div class="col-6">Categoría: </div>
+          <div class="col-6">Category: </div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
         <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
+          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
-        <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
-        </div>
-        <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
-        </div>
-        <div class="row mb-1">
-          <div class="col-6">Pregunta</div>
-        </div>
+
+
         <div>
           <input type="submit" class="button-login" value="Modify" />
 
