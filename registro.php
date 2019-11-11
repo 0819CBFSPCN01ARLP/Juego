@@ -1,12 +1,15 @@
 <?php
 require_once("funciones.php");
-
+if($_SESSION){
+$user = getLoggedUser();
+}
 if (!empty($_POST)){
 	$errores = validateRegisterForm();
 
 	if (empty($errores)){
 		$datos = sanitizeRegisterForm();
-		registerUser($datos);
+		registerUser($datos); //ESTA GUARDA EN JSON
+		//ACA IRIA TU NUEVA FUNCION QUE LLAMAS PARA GUARDAR EN DB
 		header("Location: login.php");
 	}
 }
