@@ -38,7 +38,7 @@ if (!empty($_POST)){
       <fieldset>
         <div class="form-group col-sm-12 ">
           <label>Username</label>
-          <input type="text" id="nombre" name="name" class="form-control" placeholder="write your name"
+          <input type="text" id="nombre" name="name" class="form-control" placeholder="Write your name"
             value="<?php if($_POST && !isset($errores["name"])) echo $_POST["name"]?>" required/>
 
             <!-- DEVOLUCION ERROR NOMBRE-->
@@ -51,7 +51,7 @@ if (!empty($_POST)){
         </div>
         <div class="form-group col-sm-12">
           <label>Email</label>
-          <input type="text" id="email" name="mail" class="form-control" placeholder="your-email@example.com"
+          <input type="text" id="email" name="mail" class="form-control" placeholder="Your-email@example.com"
           value="<?php if($_POST && !isset($errores["mail"])) echo $_POST["mail"]?>" required/>
 
             <!-- DEVOLUCION ERROR EMAIL-->
@@ -64,7 +64,7 @@ if (!empty($_POST)){
         </div>
         <div class="form-group col-sm-12">
           <label>Password</label>
-          <input type="password" id="pass" name="pass" class="form-control" placeholder="not less than 6 characters" required/>
+          <input type="password" id="pass" name="pass" class="form-control" placeholder="At least than 6 characters" required/>
 
             <!-- DEVOLUCION ERROR PASSWORD-->
           <?php if(isset($errores["pass"])):?>
