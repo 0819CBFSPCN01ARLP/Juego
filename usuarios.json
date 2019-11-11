@@ -1,10 +1,10 @@
 [
     {
         "id": 0,
-        "name": "paula",
-        "mail": "paula@hotmail.com",
-        "pass": "$2y$10$2jjbn6obAvRPxuN4VjDtUeVBXETY8KdQfz1gtsCzx69nBQwPz5W2e",
-        "fotodeperfil": null
+        "name": "admin",
+        "mail": "admin@hotmail.com",
+        "pass": "$2y$10$u5kc71Kr7ll2Bg8oax7AQebEA.B3NUJmhgSgFENNezJGlez3x6UK6",
+        "file": "imgperfil\/3.jpg"
     },
     {
         "id": 1,

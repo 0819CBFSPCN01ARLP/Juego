@@ -11,6 +11,14 @@ function existeEmail($mail){
     }
   }return false;
 }
+function existeNombre($name){
+  $usuarios = getAllUsers();
+  foreach ($usuarios as $usuario) {
+    if ($usuario["name"] == $name){
+      return true;
+    }
+  }return false;
+}
 
 function getAllUsers(){
   $contenidosDelArchivo = file_get_contents("usuarios.json");
@@ -28,29 +36,32 @@ function validateRegisterForm(){
   $errores = [];
   $name = trim($_POST["name"]);
   if (!isset($_POST["name"]) || empty($name)){
-    $errores["name"] = "El campo nombre es obligatorio";
+    $errores["name"] = "The name is required";
   }elseif(strlen($name) <= 3){
-    $errores["name"] = "El nombre debe tener más de tres caracteres";
+    $errores["name"] = "The name must have more than 3 characters";
+  }elseif(existeNombre($name)){
+    $errores["name"] = "This name is already registered";
   }
+
   $mail = trim($_POST["mail"]);
   if (!isset($_POST["mail"]) || empty($mail)){
-    $errores["mail"] = "El campo email es obligatorio";
+    $errores["mail"] = "The email is required";
   }elseif(!filter_var($mail, FILTER_VALIDATE_EMAIL)){
-    $errores["mail"] = "El campo email debe tener un email válido";
+    $errores["mail"] = "The email must be valid";
   }elseif(existeEmail($mail)){
-    $errores["mail"] = "El email ya se encuentra registrado";
+    $errores["mail"] = "This email is already registered";
   }
   $pass = $_POST["pass"];
   if (!isset($_POST["pass"]) || empty($_POST["pass"])){
-    $errores["pass"] = "La contraseña es obligatoria";
+    $errores["pass"] = "The password is required";
   } elseif (strlen($_POST["pass"])<6){
-   $errores["pass"] = "La contraseña debe tener al menos 6 caracteres";
+   $errores["pass"] = "The password must be at least 6 characters";
    }
   $file= $_FILES["avatar"]["tmp_name"];
    if($_FILES["avatar"]["error"] == 0){
        $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
        if($ext!="jpg" && $ext!="jpeg" && $ext!="png"){
-         $errores["file"] = "La imagen debe ser de formato jpg, jpeg o png";
+         $errores["file"] = "The image must be in png, jpg or jpeg format";
        }
   }
   return $errores;
@@ -100,10 +111,10 @@ function validateLoginForm(){
   $errores = [];
   $name = trim($_POST["name"]);
   if (!isset($_POST["name"]) || empty($name)){
-    $errores["name"] = "El campo nombre es obligatorio";
+    $errores["name"] = "The name is required";
   }
   if (!isset($_POST["pass"]) || empty($_POST["pass"])){
-    $errores["pass"] = "La contraseña es obligatoria";
+    $errores["pass"] = "The password is required";
   }
   return $errores;
 }
@@ -149,5 +160,6 @@ function getLoggedUser(){
     }
   }  return null;
 }
+
 
  ?>

@@ -14,9 +14,11 @@
         <div class="navbar-nav mr-auto">
           <a class="nav-item nav-link" href="index.php">Home </a>
           <!-- AL LOGUEARSE , APARECE LA OPCION DE IR AL PERFIL   -->
-          <?php if(isset($_SESSION["loggeduserid"])):?>
-            <!-- ACA AGREGO DATOS DE HOME LOGUEADO:  -->
+          <?php if((isset($_SESSION["loggeduserid"]))&& $user["id"]!=0):?>
           <a class="nav-item nav-link" href="perfil.php">Profile</a>
+          <?php endif;?>
+          <?php if((isset($_SESSION["loggeduserid"]))&& $user["id"]==0):?>
+          <a class="nav-item nav-link" href="abm.php">ABM</a>
           <?php endif;?>
           <a class="nav-item nav-link" href="FAQ.php">FAQ</a>
         </div>
