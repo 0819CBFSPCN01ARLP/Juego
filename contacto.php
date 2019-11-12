@@ -1,5 +1,8 @@
 <?php
   require_once("funciones.php");
+  if($_SESSION){
+  $user = getLoggedUser();
+  }
   $titulo= "Contact";
 ?>
 <!DOCTYPE html>

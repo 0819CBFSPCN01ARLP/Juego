@@ -14,7 +14,7 @@ if (!empty($_POST)){
 		$datos = sanitizeLoginForm();
 		if(loginUser($datos)){
 			header("Location:index.php");
-		}else{$errores["login"] = "Usuario y/o contraseña incorrectos";
+		}else{$errores["login"] = "Incorrect username and/or password";
 		}
 	}
 }
