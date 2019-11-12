@@ -20,7 +20,7 @@ $user["name"]= ucwords($user["name"]); //primer letra mayuscula
      <!-- NAVIGATION -->
     <?php  include_once("partials/navbar.php");?>
 <div class="text-center">
-  <h4>Welcome<?php if($_SESSION){echo " ".$user["name"];}?>!! click here to start your game! </h4>
+  <h4>Welcome<?php if($_SESSION){echo " ".$user["name"];}?>!! Click here to start your game! </h4>
 <br>
 </div>
 <a href="jugar.php">

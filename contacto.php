@@ -33,7 +33,7 @@
             id="nombre"
             name="nombre"
             class="form-control"
-            placeholder="write your name"
+            placeholder="Write your name"
             required
           />
         </div>
@@ -44,7 +44,7 @@
             id="email"
             name="email"
             class="form-control"
-            placeholder="your-email@example.com"
+            placeholder="Your-email@example.com"
             required
           />
         </div>
@@ -54,7 +54,7 @@
             id="textarea"
             cols="90"
             rows="4"
-            placeholder="write your consult here"
+            placeholder="Write your consult here"
             required
           ></textarea>
         </div>
