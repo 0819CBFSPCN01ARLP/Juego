@@ -6,11 +6,17 @@ CREATE TABLE usuarios (
 	Id_usuarios INT NOT NULL AUTO_INCREMENT,
     Nombre VARCHAR(20) NOT NULL,
     Email VARCHAR(20) NOT NULL, 
-    Pass VARCHAR(50) NOT NULL,
+    Pass VARCHAR(100) NOT NULL,
+    Foto VARCHAR(100),
     PRIMARY KEY (Id_usuarios)
     );
+
+ALTER TABLE usuarios DROP COLUMN Pass;
+
 ALTER TABLE usuarios
- ADD foto VARCHAR(50) NOT NULL;
+ ADD Pass VARCHAR(100) NOT NULL;
+ ALTER TABLE usuarios
+ ADD Pass VARCHAR(100);
 
 CREATE TABLE partida (
 	Id_partida INT NOT NULL AUTO_INCREMENT,
@@ -49,4 +55,6 @@ CREATE TABLE categorias (
     );
 describe usuarios;
 select * from usuarios;
-INSERT into usuarios (Id_usuarios, Nombre, Email, Pass, foto ) VALUES (null, 'admin', 'admin@gmail.com', '$2y$10$u5kc71Kr7ll2Bg8oax7AQebEA.B3NUJmhgSgFENNezJGlez3x6UK6', 'imgperfil\/1.jpg');
+INSERT into usuarios (Id_usuarios, Nombre, Email, Pass) VALUES (0, 'admin', 'admin@gmail.com', '$2y$10$u5kc71Kr7ll2Bg8oax7AQebEA.B3NUJmhgSgFENNezJGlez3x6UK6');
+DELETE FROM usuarios
+where id_Usuarios<5;

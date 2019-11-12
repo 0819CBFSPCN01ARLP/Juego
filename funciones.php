@@ -105,7 +105,6 @@ function registerUser($data){
   saveUsers($usuarios);
 }
 
-
 // FUNCIONES PARA EL LOGIN: VALIDACION Y SANIDAD DE DATOS, LOGUEAR USUARIO.
 function validateLoginForm(){
   $errores = [];
@@ -147,6 +146,20 @@ function loginUser($data){
   return false;
 }
 
+// function loginUserDB($conn,$datos){
+// 		$query= $conn->query("SELECT id_usuarios, Nombre, Pass FROM usuarios");
+// 		$usuarios= $query->fetchAll(PDO::FETCH_ASSOC);
+//
+// 		foreach ($usuarios as $usuario) {  //recorrer los usuarios hasta encontrar un email
+// 			if (($usuario["Nombre"] == $datos["name"])&&(password_verify($datos["pass"], $usuario["Pass"]))){
+// 					if($datos["remember-me"]){
+// 						rememberCredentials($datos["name"]);
+// 					}
+// 					$_SESSION["loggeduserid"] = $usuario["id_usuarios"];
+// 			}
+// 		}
+// }
+
 function rememberCredentials($name){
   setcookie("rememberedUser",$name, time()+60*60*24*30); //30 dias
 }
@@ -159,6 +172,33 @@ function getLoggedUser(){
       return $usuario;
     }
   }  return null;
+}
+
+function getLoggedUserDB($conn){
+  $query= $conn->query("SELECT id_usuarios, Nombre, Pass FROM usuarios");
+  $usuarios= $query->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($usuarios as $usuario) {
+    if ($usuario["id_usuarios"] == $_SESSION["loggeduserid"]){
+      return $usuario;
+    }
+  }  return null;
+}
+
+//EDICION DEL PERFIL
+function editarPerfil($user){
+  $usuarios = getAllUsers();
+  $id = $user["id"];
+  $user=[];
+  $user["id"]=$user["id"];
+  $user["name"]=trim($_POST["newName"]);
+  $user["mail"]=$user["mail"];
+  $user["pass"]=password_hash($_POST["newPass"],PASSWORD_DEFAULT);
+  $user["file"]=saveFile($id);
+
+  $usuarios[] = $user;
+  saveUsers($usuarios);
+
+  $_SESSION["loggeduserid"] = $user["id"];
 }
 
 

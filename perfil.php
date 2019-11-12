@@ -1,11 +1,12 @@
 <?php
+require_once("database.php");
 require_once("funciones.php");
 
 if(!$_SESSION){
   header("Location: login.php");
 } else {
-$user = getLoggedUser();
-$user["name"]= ucwords($user["name"]); //primer letra mayuscula
+$user = getLoggedUserDB($conn);
+$user["name"]= ucwords($user["Nombre"]); //primer letra mayuscula
 }
 
   $titulo= "Profile";
@@ -33,18 +34,15 @@ $user["name"]= ucwords($user["name"]); //primer letra mayuscula
           <?=$user["name"];?> total score:
         </div>
         <div class="card-body">
-          <h5 class="card-title">Congratulation <?=$user["name"];?>!!,this week you added 5000 points!</h5>
+          <h5 class="card-title">Congratulation <?=$user["name"];?>!!,
+            this week you added 5000 points!</h5>
           <div>
             <a href="index.php
-            " class="btn mt-2 mb-2 abm">Return to main page</a>
+            " class="btn mt-2 mb-3 abm">Return to main page</a>
           </div>
           <div>
             <a href="tabla.php
-              " class="btn mb-2 abm">Go to the ranking</a>
-          </div>
-          <div>
-            <a href="registro.php
-            " class="btn mb-2 abm">New User</a>
+              " class="btn mb-3 abm">Go to the ranking</a>
           </div>
           <div>
             <a href="edition.php

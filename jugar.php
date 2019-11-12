@@ -1,4 +1,11 @@
 <?php
+require_once("database.php");
+require_once("funciones.php");
+if($_SESSION){
+$user = getLoggedUserDB($conn);
+$user["name"]= $user["Nombre"];
+}
+
   $titulo= "Playing";
 ?>
 <!DOCTYPE html>
@@ -28,9 +35,9 @@
       </div>
       <!-- botones -->
       <div class="m-auto">
-        <button class="btn btn-success btn-lg true mb-2 btn-block" style="">VERDADERO</button>
+        <button class="btn btn-success btn-lg btn-block true m-auto" style="">VERDADERO</button>
         <br>
-        <button class="btn btn-danger btn-lg false btn-block">FALSO</button>
+        <button class="btn btn-danger btn-lg btn btn-block false m-auto">FALSO</button>
       </div>
     </div>
   </body>

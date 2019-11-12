@@ -1,7 +1,9 @@
 <?php
+  require_once("database.php");
   require_once("funciones.php");
   if($_SESSION){
-  $user = getLoggedUser();
+  $user = getLoggedUserDB($conn);
+  $user["name"]= $user["Nombre"];
   }
   $titulo= "Contact";
 ?>
@@ -33,7 +35,7 @@
             id="nombre"
             name="nombre"
             class="form-control"
-            placeholder="Write your name"
+            placeholder="write your name"
             required
           />
         </div>
@@ -44,7 +46,7 @@
             id="email"
             name="email"
             class="form-control"
-            placeholder="Your-email@example.com"
+            placeholder="your-email@example.com"
             required
           />
         </div>
@@ -54,7 +56,7 @@
             id="textarea"
             cols="90"
             rows="4"
-            placeholder="Write your consult here"
+            placeholder="write your consult here"
             required
           ></textarea>
         </div>

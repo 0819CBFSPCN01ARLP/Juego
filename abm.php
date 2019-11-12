@@ -1,12 +1,14 @@
 <?php
+require_once("database.php");
 require_once("funciones.php");
 
 if(!$_SESSION){
   header("Location: login.php");
 } else {
-$user = getLoggedUser();
+$user = getLoggedUserDB($conn);
+$user["name"]= $user["Nombre"];
 }
-if($user["id"]!=0){
+if($user["Nombre"]!="admin"){
   header("Location:login.php");
 }
 

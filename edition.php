@@ -1,18 +1,14 @@
 <?php
+require_once("database.php");
 require_once("funciones.php");
-
-
-// if (!empty($_POST)){
-// 	$errores = validateLoginForm();
-//
-// 	if (empty($errores)){
-// 		$datos = sanitizeLoginForm();
-// 		if(loginUser($datos)){
-// 			header("Location: perfil.php");
-// 		}else{$errores["login"] = "Usuario y/o contraseña incorrectos";
-// 		}
-// 	}
+if($_SESSION){
+$user = getLoggedUserDB($conn);
+$user["name"]= $user["Nombre"];
+}
+// if($_POST){
+// $users=editarPerfil($user);
 // }
+
   $titulo= "Edition";
 ?>
 
@@ -35,15 +31,14 @@ require_once("funciones.php");
           <form action="" method="post">
           <div>
             <label for="username">New Username</label>
-            <input type="text" name="name" class="username"  required
-            value=""/>
+            <input type="text" name="newName" class="username" value=""/>
           </div>
           <div>
             <label for="password">New Password</label>
-            <input type="password" name="pass" class="password" />
+            <input type="password" name="newPass" class="password" />
           </div>
 					<label>New picture</label><br>
-						<input type="file" name="avatar" />
+						<input type="file" name="newAvatar" />
             <input type="submit" class="button-login" value="Save changes" />
           </div>
           <div>

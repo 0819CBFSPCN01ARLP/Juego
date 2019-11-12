@@ -1,23 +1,17 @@
 [
-  {
-    "id": 0,
-    "name": "admin",
-    "mail": "admin@hotmail.com",
-    "pass": "$2y$10$u5kc71Kr7ll2Bg8oax7AQebEA.B3NUJmhgSgFENNezJGlez3x6UK6",
-    "file": "imgperfil/3.jpg"
-  },
-  {
-    "id": 1,
-    "name": "ceci",
-    "mail": "ceci@hotmail.com",
-    "pass": "$2y$10$ualduK2AoUw7IWzv9Dt2Re3CMKMSUs/Apaw0baMuqSJKDW8RwgC8K",
-    "file": "imgperfil/1.jpg"
-  },
-  {
-    "id": 2,
-    "name": "pablo",
-    "mail": "pablo@gmail.com",
-    "pass": "$2y$10$WhJGHA0kZz9dwOvMT.nSNeW7VUEb4XLFPVpqGEN.oF9qzsSv1zKvO",
-    "file": "imgperfil/4.jpg"
-  }
+    {
+        "id": 0,
+        "name": "admin1",
+        "mail": "admin@hotmail.com",
+        "pass": "$2y$10$u5kc71Kr7ll2Bg8oax7AQebEA.B3NUJmhgSgFENNezJGlez3x6UK6",
+        "file": "imgperfil\/3.jpg"
+    },
+    {
+        "id": 1,
+        "name": "ceci1",
+        "mail": "ceci1@hotmail.com",
+        "pass": "$2y$10$ualduK2AoUw7IWzv9Dt2Re3CMKMSUs\/Apaw0baMuqSJKDW8RwgC8K",
+        "file": "imgperfil\/1.jpg"
+    }
+
 ]

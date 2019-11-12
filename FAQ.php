@@ -1,7 +1,9 @@
 <?php
+  require_once("database.php");
   require_once("funciones.php");
   if($_SESSION){
-  $user = getLoggedUser();
+  $user = getLoggedUserDB($conn);
+  $user["name"]= $user["Nombre"];
   }
   $titulo= "FAQ";
 ?>

@@ -3,7 +3,8 @@ require_once("database.php");
 require_once("funciones.php");
 
 if($_SESSION){
-$user = getLoggedUser();
+$user = getLoggedUserDB($conn);
+$user["name"]= $user["Nombre"];
 }
 
 if (!empty($_POST)){
@@ -11,20 +12,22 @@ if (!empty($_POST)){
 
 	if (empty($errores)){
 		$datos = sanitizeRegisterForm();
+
+//codigo para guardar en db:
+		  $sql= "INSERT INTO usuarios VALUES (default, :Nombre, :Email, :Pass, :Foto)";
+		  $stmt= $conn->prepare($sql);
+		  // $stmt->bindParam(":id_usuarios", 'null');
+		  $stmt->bindParam(':Nombre', $_POST['name']);
+		  $stmt->bindParam(':Email', $_POST['mail']);
+		  $stmt->bindParam(':Pass', $datos['pass']);
+			$stmt->bindParam(':Foto', $datos['file']);
+
+		  // $stmt->execute();
+			if (!$stmt->execute()){
+			    var_dump($stmt->errorInfo());
+			    exit;
+			}
 		// registerUser($datos);  ->ESTA GUARDABA EN JSON
-
-		//ESTO GUARDA EN BASE DE DATOS EL USUARIO REGISTRADO
-		$sql= "INSERT INTO usuarios (Id_usuarios, Nombre, Email, Pass, foto)
-						VALUES (null, :nombre, :email, :pass, :foto)";
-		$stmt= $conn->prepare($sql);
-		// $stmt->bindParam(":id_usuarios", 'null');
-		$stmt->bindParam(":nombre", $_POST["name"]);
-		$stmt->bindParam(":email", $_POST["mail"]);
-		$stmt->bindParam(":pass", $data["pass"]);
-		$stmt->bindParam(":foto", $data["file"]);
-
-	  $stmt->execute();
-
 		header("Location: login.php");
 	}
 }
@@ -56,7 +59,7 @@ if (!empty($_POST)){
       <fieldset>
         <div class="form-group col-sm-12 ">
           <label>Username</label>
-          <input type="text" id="nombre" name="name" class="form-control" placeholder="Write your name"
+          <input type="text" id="nombre" name="name" class="form-control" placeholder="write your name"
             value="<?php if($_POST && !isset($errores["name"])) echo $_POST["name"]?>" required/>
 
             <!-- DEVOLUCION ERROR NOMBRE-->
@@ -69,7 +72,7 @@ if (!empty($_POST)){
         </div>
         <div class="form-group col-sm-12">
           <label>Email</label>
-          <input type="text" id="email" name="mail" class="form-control" placeholder="Your-email@example.com"
+          <input type="text" id="email" name="mail" class="form-control" placeholder="your-email@example.com"
           value="<?php if($_POST && !isset($errores["mail"])) echo $_POST["mail"]?>" required/>
 
             <!-- DEVOLUCION ERROR EMAIL-->
@@ -82,7 +85,7 @@ if (!empty($_POST)){
         </div>
         <div class="form-group col-sm-12">
           <label>Password</label>
-          <input type="password" id="pass" name="pass" class="form-control" placeholder="At least than 6 characters" required/>
+          <input type="password" id="pass" name="pass" class="form-control" placeholder="not less than 6 characters" required/>
 
             <!-- DEVOLUCION ERROR PASSWORD-->
           <?php if(isset($errores["pass"])):?>
@@ -93,7 +96,7 @@ if (!empty($_POST)){
           <label>Picture</label>
             <input type="file" name="avatar" />
           <div class="text-center mt-1">
-          <button type="submit" class="btn" >Register me</button>
+          <button type="submit" class="btn" >Sign up</button>
         </div>
         </fieldset>
       </form>

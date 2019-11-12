@@ -1,11 +1,12 @@
 <?php
+require_once("database.php");
 require_once("funciones.php");
 
 if(!$_SESSION){
   header("Location: login.php");
 } else {
-$user = getLoggedUser();
-$user["name"]= ucwords($user["name"]); //primer letra mayuscula
+$user = getLoggedUserDB($conn);
+$user["name"]= ucwords($user["Nombre"]); //primer letra mayuscula
 }
 
   $titulo= "Ranking";
@@ -29,7 +30,7 @@ $user["name"]= ucwords($user["name"]); //primer letra mayuscula
     >
       <div class="card text-center">
         <div class="card-header" style="font-weight:bold">
-          <?=$user["name"];?> score: 
+          <?=$user["name"];?> score:
         </div>
         <div class="row mb-1">
           <div class="col-6">Frula</div>

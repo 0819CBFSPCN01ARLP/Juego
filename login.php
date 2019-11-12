@@ -1,4 +1,5 @@
 <?php
+require_once("database.php");
 require_once("funciones.php");
 
 $name = "";
@@ -9,15 +10,24 @@ if (isset($_COOKIE["rememberedUser"])){
 
 if (!empty($_POST)){
 	$errores = validateLoginForm();
-
 	if (empty($errores)){
 		$datos = sanitizeLoginForm();
-		if(loginUser($datos)){
-			header("Location:index.php");
-		}else{$errores["login"] = "Incorrect username and/or password";
+
+		$query= $conn->query("SELECT id_usuarios, Nombre, Pass FROM usuarios");
+		$usuarios= $query->fetchAll(PDO::FETCH_ASSOC);
+
+		foreach ($usuarios as $usuario) {  //recorrer los usuarios hasta encontrar un email
+			if (($usuario["Nombre"] == $datos["name"])&&(password_verify($datos["pass"], $usuario["Pass"]))){
+					if($datos["remember-me"]){
+						rememberCredentials($datos["name"]);
+					}
+					$_SESSION["loggeduserid"] = $usuario["id_usuarios"];
+					header("Location:index.php");
+				} $errores["login"] = "Incorrect username and/or password";
+			}
 		}
 	}
-}
+
   $titulo= "Login";
 ?>
 
