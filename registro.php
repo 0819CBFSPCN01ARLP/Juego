@@ -1,15 +1,30 @@
 <?php
+require_once("database.php");
 require_once("funciones.php");
+
 if($_SESSION){
 $user = getLoggedUser();
 }
+
 if (!empty($_POST)){
 	$errores = validateRegisterForm();
 
 	if (empty($errores)){
 		$datos = sanitizeRegisterForm();
-		registerUser($datos); //ESTA GUARDA EN JSON
-		//ACA IRIA TU NUEVA FUNCION QUE LLAMAS PARA GUARDAR EN DB
+		// registerUser($datos);  ->ESTA GUARDABA EN JSON
+
+		//ESTO GUARDA EN BASE DE DATOS EL USUARIO REGISTRADO
+		$sql= "INSERT INTO usuarios (Id_usuarios, Nombre, Email, Pass, foto)
+						VALUES (null, :nombre, :email, :pass, :foto)";
+		$stmt= $conn->prepare($sql);
+		// $stmt->bindParam(":id_usuarios", 'null');
+		$stmt->bindParam(":nombre", $_POST["name"]);
+		$stmt->bindParam(":email", $_POST["mail"]);
+		$stmt->bindParam(":pass", $data["pass"]);
+		$stmt->bindParam(":foto", $data["file"]);
+
+	  $stmt->execute();
+
 		header("Location: login.php");
 	}
 }
