@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!-- Aca creamos el archivo que llama a la base de datos -->
 
 <?php
@@ -15,7 +15,7 @@ try {
   die('Connection Failed: ' . $e->getMessage());
 }
 ?>
-=======
+
 <?php
 $server= "localhost";
 $username= "root";
@@ -29,4 +29,3 @@ try{
 }
 
 ?>
->>>>>>> b5486059ff34be9a4c97f7111ae9778d903066db
