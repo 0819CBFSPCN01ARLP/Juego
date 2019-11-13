@@ -54,16 +54,22 @@ if($user["Nombre"]!="admin"){
         <div class="row mb-1">
           <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
         </div>
-        <div class="row mb-1">
-          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
-        </div>
-        <div class="row mb-1">
-          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
-        </div>
-        <div class="row mb-1">
-          <div class="col-6">Pregunta</div><div class="col-6 float-right">Boolean</div>
-        </div>
+        <input type="text" name="new" class="Question" value=""><br>
+        <div class="">
 
+        <select class="drop-down menu col-sm-4 " placeholder="Boolean" value="" name="category">
+          <option value="1">Verdadero</option>
+          <option value="2">Falso</option>
+        </select>
+        <select class="drop-down menu col-sm-4 " placeholder="Select category" value="" name="category">
+          <option value="1">Ciencia</option>
+          <option value="2">Arte</option>
+          <option value="3">Geografía</option>
+          <option value="4">Espectaculos</option>
+          <option value="5">Historia</option>
+
+        </select> <br><br>
+      </div>
 
         <div>
           <input type="submit" class="button-login" value="Modify" />
