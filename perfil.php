@@ -6,6 +6,7 @@ if(!$_SESSION){
   header("Location: login.php");
 } else {
 $user = getLoggedUserDB($conn);
+$user["file"]=$user["Foto"];
 $user["name"]= ucwords($user["Nombre"]); //primer letra mayuscula
 }
 

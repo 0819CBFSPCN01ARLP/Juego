@@ -76,11 +76,12 @@ function sanitizeRegisterForm(){
   return $data;
 }
 
-function saveFile($id){
+function saveFile($algo){
  if($_FILES){
+  $algo=$_POST["name"];
   $ruta="imgperfil";
   $file= $_FILES["avatar"]["tmp_name"];
-  $nombrearchivo= $id;
+  $nombrearchivo= $algo;
   move_uploaded_file($file, $ruta."/".$nombrearchivo.".jpg");
   $ruta= $ruta."/".$nombrearchivo.".jpg";
   return $ruta;
@@ -175,7 +176,7 @@ function getLoggedUser(){
 }
 
 function getLoggedUserDB($conn){
-  $query= $conn->query("SELECT id_usuarios, Nombre, Pass FROM usuarios");
+  $query= $conn->query("SELECT id_usuarios, Nombre, Pass, Foto FROM usuarios");
   $usuarios= $query->fetchAll(PDO::FETCH_ASSOC);
   foreach ($usuarios as $usuario) {
     if ($usuario["id_usuarios"] == $_SESSION["loggeduserid"]){

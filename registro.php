@@ -12,7 +12,7 @@ if (!empty($_POST)){
 
 	if (empty($errores)){
 		$datos = sanitizeRegisterForm();
-
+		$ruta=saveFile($algo);
 //codigo para guardar en db:
 		  $sql= "INSERT INTO usuarios VALUES (default, :Nombre, :Email, :Pass, :Foto)";
 		  $stmt= $conn->prepare($sql);
@@ -20,7 +20,7 @@ if (!empty($_POST)){
 		  $stmt->bindParam(':Nombre', $_POST['name']);
 		  $stmt->bindParam(':Email', $_POST['mail']);
 		  $stmt->bindParam(':Pass', $datos['pass']);
-			$stmt->bindParam(':Foto', $datos['file']);
+			$stmt->bindParam(':Foto', $ruta);
 
 		  // $stmt->execute();
 			if (!$stmt->execute()){
@@ -59,7 +59,7 @@ if (!empty($_POST)){
       <fieldset>
         <div class="form-group col-sm-12 ">
           <label>Username</label>
-          <input type="text" id="nombre" name="name" class="form-control" placeholder="write your name"
+          <input type="text" id="nombre" name="name" class="form-control" placeholder="Write your name"
             value="<?php if($_POST && !isset($errores["name"])) echo $_POST["name"]?>" required/>
 
             <!-- DEVOLUCION ERROR NOMBRE-->
@@ -72,7 +72,7 @@ if (!empty($_POST)){
         </div>
         <div class="form-group col-sm-12">
           <label>Email</label>
-          <input type="text" id="email" name="mail" class="form-control" placeholder="your-email@example.com"
+          <input type="text" id="email" name="mail" class="form-control" placeholder="Email@example.com"
           value="<?php if($_POST && !isset($errores["mail"])) echo $_POST["mail"]?>" required/>
 
             <!-- DEVOLUCION ERROR EMAIL-->
@@ -85,7 +85,7 @@ if (!empty($_POST)){
         </div>
         <div class="form-group col-sm-12">
           <label>Password</label>
-          <input type="password" id="pass" name="pass" class="form-control" placeholder="not less than 6 characters" required/>
+          <input type="password" id="pass" name="pass" class="form-control" placeholder="Not less than 6 characters" required/>
 
             <!-- DEVOLUCION ERROR PASSWORD-->
           <?php if(isset($errores["pass"])):?>

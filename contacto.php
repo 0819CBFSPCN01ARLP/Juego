@@ -35,18 +35,18 @@
             id="nombre"
             name="nombre"
             class="form-control"
-            placeholder="write your name"
+            placeholder="Write your name"
             required
           />
         </div>
-        <div class="form-group col-12">
+        <div class="form-group col-12 mb-4">
           <label>Email</label>
           <input
             type="email"
             id="email"
             name="email"
             class="form-control"
-            placeholder="your-email@example.com"
+            placeholder="Email@example.com"
             required
           />
         </div>
@@ -56,11 +56,11 @@
             id="textarea"
             cols="90"
             rows="4"
-            placeholder="write your consult here"
+            placeholder="Write your consult here ..."
             required
           ></textarea>
         </div>
-        <div class="text-center mt-1 pb-3">
+        <div class="text-center mt-1 pb-4">
           <button type="submit" class="btn">Send</button>
         </div>
       </form>
