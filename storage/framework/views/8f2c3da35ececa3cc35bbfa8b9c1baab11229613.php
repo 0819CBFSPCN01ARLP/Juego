@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\Notebook\Juego\resources\views/logout.blade.php ENDPATH**/ ?>
