@@ -30,6 +30,12 @@ Route::get('/abm', function () {
     return view('abm');
 });
 
+Route::post('/abm', "abmController@insert");
+
+Route::patch('/abm', "abmController@modify");
+
+Route::delete('/abm', "abmController@delete");
+
 Route::get('/faq', function () {
     return view('faq');
 });
@@ -53,3 +59,5 @@ Route::get('/edition', function () {
 Route::get('/ranking', function () {
     return view('ranking');
 });
+
+
