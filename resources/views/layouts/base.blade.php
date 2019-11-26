@@ -25,18 +25,23 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <div class="navbar-nav mr-auto">
-
+          @guest
           <a class="nav-item nav-link" href="/home">Home </a>
           <a class="nav-item nav-link" href="/contact">Contact</a>
           <a class="nav-item nav-link" href="/faq">FAQ</a>
-          @guest
-          <a class="nav-item nav-link" href="/register">Register</a>
-          <a class="nav-item nav-link" href="/login">Login</a>
-        </div>
-      @else
-        <div class="navbar-nav ml-auto">
+          @else
+          <a class="nav-item nav-link" href="/home">Home </a>
+          <a class="nav-item nav-link" href="/contact">Contact</a>
+          <a class="nav-item nav-link" href="/faq">FAQ</a>
           <a class="nav-item nav-link" href="/profile">Profile</a>
           <a class="nav-item nav-link" href="/abm">ABM</a>
+          @endguest
+        </div>
+        <div class="navbar-nav ml-auto">
+          @guest
+         <a class="nav-item nav-link" href="/register">Register</a>
+         <a class="nav-item nav-link" href="/login">Login</a>
+         @else         
         <a class="nav-item nav-link" href="{{ route('logout') }}"
          onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">
@@ -45,8 +50,8 @@
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
+        @endguest
         </div>
-      @endguest
       </div>
     </nav>
 @yield('content')

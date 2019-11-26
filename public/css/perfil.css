@@ -33,3 +33,14 @@ body {
   text-decoration: underline;
   color: white;
 }
+
+.btn {
+    color: white;
+    font-size: 20px;
+    
+    background-color: transparent;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}

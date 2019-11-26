@@ -18,10 +18,10 @@
       <h4 class="text-align-center">EL AGUA HIERVE A 95 GRADOS</h4>
     </div>
     <!-- botones -->
-    <div class="m-auto">
-      <button class="btn btn-success btn-lg btn-block true m-auto" style="">VERDADERO</button>
-      <br>
-      <button class="btn btn-danger btn-lg btn btn-block false m-auto">FALSO</button>
+    <div class=" text-center m-auto">
+      <button class="btn btn-success btn-lg true m-auto" style="">VERDADERO</button>
+      <br><br>
+      <button class="btn btn-danger btn-lg btn false m-auto">FALSO</button>
     </div>
   </div>
 @endsection

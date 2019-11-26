@@ -9,7 +9,7 @@
 @section('content')
   <section class="container col-lg-8 col-md-8 col-sm-12 login-box mt-5">
     <form method="POST" action="{{ route('register') }}">
-        @csrf
+        {{csrf_field()}}
 <fieldset>
   <div class="form-group col-sm-12 ">
     <label for="name">{{ __('Name') }}</label>

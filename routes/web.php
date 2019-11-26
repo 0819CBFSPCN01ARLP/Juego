@@ -26,9 +26,8 @@ Route::get('/play', function () {
     return view('play');
 });
 
-Route::get('/abm', function () {
-    return view('abm');
-});
+
+Route::get('/abm', "abmController@list");
 
 Route::post('/abm', "abmController@insert");
 
@@ -59,5 +58,3 @@ Route::get('/edition', function () {
 Route::get('/ranking', function () {
     return view('ranking');
 });
-
-

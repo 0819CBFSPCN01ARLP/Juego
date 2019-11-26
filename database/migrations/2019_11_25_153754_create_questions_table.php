@@ -17,9 +17,9 @@ class CreateQuestionsTable extends Migration
           $table->bigIncrements('id');
           $table->text('text');
           $table->boolean('value');
-          $table->unsignedBigInteger('level_id');
+          // $table->unsignedBigInteger('level_id');
           $table->unsignedBigInteger('category_id');
-          $table->foreign('level_id')->references('id')->on('levels');
+          // $table->foreign('level_id')->references('id')->on('levels');
           $table->foreign('category_id')->references('id')->on('category');
           // $table->timestamps();
         });
