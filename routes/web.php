@@ -26,11 +26,6 @@ Route::get('/play', function () {
     return view('play');
 });
 
-<<<<<<< HEAD
-Route::get('/abm', function () {
-    return view('abm');
-});
-=======
 
 Route::get('/abm', "abmController@list");
 
@@ -39,7 +34,6 @@ Route::post('/abm', "abmController@insert");
 Route::patch('/abm', "abmController@modify");
 
 Route::delete('/abm', "abmController@delete");
->>>>>>> 187f4cd78c03d9442db7228b810542960c5589ac
 
 Route::get('/faq', function () {
     return view('faq');
