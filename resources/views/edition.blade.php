@@ -26,7 +26,7 @@
         {{-- <label>New picture</label>
           <input type="file" name="newAvatar" /> <br><br> <br>
       </div> --}}
-      <input type="submit" class="button" value="Save changes" />
+      <input type="submit" class="btn" value="Save changes" />
     </div>
   </form>
   </div>
