@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-use App\question;
-use App\category;
+use App\Question;
+use App\Category;
 
 class abmController extends Controller
 {
@@ -14,13 +14,24 @@ class abmController extends Controller
     if($mail != 'admin@hotmail.com'){
       return redirect('home');
     }
-    $category= category::all();
-    $questions= question::all();
+    $category= Category::all();
+    $questions= Question::all();
     $vac= compact("category", "questions");
     return view("abm", $vac);
   }
 
-
+  public function showModify($id){
+    $mail= auth()->user()->email;
+    if($mail != 'admin@hotmail.com'){
+      return redirect('home');
+    }
+    $question = Question::find($id);
+    // dd($question);
+    $category= Category::all();
+    $questions= Question::all();
+    $vac= compact("category", "questions","question");
+    return view("abm", $vac);
+  }
 
     public function insert(Request $form){
       $form->validate([
@@ -28,7 +39,7 @@ class abmController extends Controller
         "category"=>'required',
         'vof'=>'required'
       ]);
-        $newQues = new question();
+        $newQues = new Question();
         $newQues->text=$form->text;
         $newQues->category_id=$form->category;
         $newQues->value=$form->vof;
@@ -38,10 +49,20 @@ class abmController extends Controller
         return back()->with('mensaje', 'pregunta agregada');
     }
 
-    public function modify(){
-
+    public function modify(Request $form){
+      $question = Question::find($form->id);
+      $question->text=$form->text;
+      $question->category_id=$form->category;
+      $question->value=$form->vof;
+      $question-> save();
+      return redirect("/abm")->with('mensaje', 'pregunta modificada');
     }
-    public function delete(){
-
+    public function delete(Request $form){
+      $question = Question::find($form->id);
+      $question->text=$form->text;
+      $question->category_id=$form->category;
+      $question->value=$form->vof;
+      $question-> delete();
+      return redirect("/abm")->with('mensaje', 'pregunta eliminada');
     }
 }

@@ -8,7 +8,7 @@
 
 @section('content')
   <div class="text-center">
-    <h4>@guest Welcome @else Welcome {{ Auth::user()->name }}@endguest!! click here to start your game! </h4>
+    <h4>@guest Welcome @else Welcome {{ucwords(Auth::user()->name) }}@endguest!! click here to start your game! </h4>
   <br>
   </div>
   <a href="/play">

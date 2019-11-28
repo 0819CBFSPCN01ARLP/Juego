@@ -7,26 +7,28 @@
 @endsection
 
 @section('content')
-  <div class="container text-center col-lg-4 col-md-6 col-sm-10 col-xs-10 mt-3" id="puntaje">
+  <div class="container text-center col-lg-6 col-md-6 col-sm-10 col-xs-12 mt-5" id="puntaje">
   <div class="card text-center">
-    <h3>Edition</h3>
+    <h3>{{ucwords(Auth::user()->name) }}, insert your new data</h3>
+
     <div class="card-body">
+      <form action="/edition" method="post">
+        {{ csrf_field() }}
       <div>
         <label for="username">New Username</label>
-        <input type="text" name="newName" class="username" value=""/>
+        <input type="text" name="newName" class="username" value=""/> <br><br>
       </div>
-      <form action="" method="post">
       <div>
         <label for="password">New Password</label>
-        <input type="password" name="newPass" class="password" />
+        <input type="password" name="newPass" class="password"/> <br><br>
       </div>
       <div>
-        <label>New picture</label>
-          <input type="file" name="newAvatar" /> <br><br>
-      </div>
-      </form>
+        {{-- <label>New picture</label>
+          <input type="file" name="newAvatar" /> <br><br> <br>
+      </div> --}}
+      <input type="submit" class="button" value="Save changes" />
     </div>
-    <input type="submit" class="button-login" value="Save changes" />
+  </form>
   </div>
 </div>
 

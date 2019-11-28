@@ -22,12 +22,11 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/play', function () {
-    return view('play');
-});
 
+Route::get('/play', "playController@showQuestions");
 
 Route::get('/abm', "abmController@list");
+Route::get('/abm/{id}', "abmController@showModify");
 
 Route::post('/abm', "abmController@insert");
 
@@ -55,6 +54,6 @@ Route::get('/edition', function () {
     return view('edition');
 });
 
-Route::get('/ranking', function () {
-    return view('ranking');
-});
+Route::post('/edition', "editionController@editUser");
+
+Route::get('/ranking', "rankingController@list");

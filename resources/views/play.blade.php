@@ -14,14 +14,27 @@
     </div>
   </div>
   <!-- preguntas  -->
-    <div class="m-auto preguntas">
-      <h4 class="text-align-center">EL AGUA HIERVE A 95 GRADOS</h4>
-    </div>
+  <div class="m-auto preguntas">
+    <h4 class="text-align-center">EL AGUA HIERVE A 95 GRADOS</h4>
+  </div>
     <!-- botones -->
     <div class=" text-center m-auto">
-      <button class="btn btn-success btn-lg true m-auto" style="">VERDADERO</button>
+      <button type="submit" name="1" class="btn btn-success btn-lg true m-auto" style="">VERDADERO</button>
       <br><br>
-      <button class="btn btn-danger btn-lg btn false m-auto">FALSO</button>
+      <button type="submit" name="0" class="btn btn-danger btn-lg btn false m-auto">FALSO</button>
     </div>
   </div>
 @endsection
+
+{{-- @forelse ($questions as $q)
+  <div class="m-auto preguntas">
+    <h4 class="text-align-center">{{$q['text']}}</h4>
+  </div>
+@empty
+  <p>No hay usuarios</p>
+@endforelse --}}
+
+{{-- COMO JUGAR: Elegí tu primer categoría para comenzar a jugar el Nivel 1, donde tendrás
+10 preguntas de 10ptos cada una y que deberás responder antes de 1'. Al pasar de Nivel,
+elegirás la siguiente categoría, el puntaje por acierto será mayor pero ojo! que el
+tiempo se reduce. Las categorías pueden elegirse una sola vez! --}}

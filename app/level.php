@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class level extends Model
+class Level extends Model
 {
     //public $table = "Levels";
     //public $primaryKey = "id";

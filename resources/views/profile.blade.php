@@ -8,13 +8,18 @@
 
 @section('content')
   <div
-  class="container text-center col-lg-8 col-md-8 col-sm-10 col-xs-12 mt-5"
+  class="container text-center col-lg-6 col-md-6 col-sm-10 col-xs-12 mt-5"
   id="puntaje">
   <div class="card text-center">
     <div class="card-header user-img" style="font-weight:bold">
       <img src="imgperfil/1.jpg" alt="" />
-      {{ Auth::user()->name }} total score:
+      {{ucwords(Auth::user()->name) }} total score:
       </div>
+      @if(session('mensaje'))
+        <div class="alert alert-success">
+          {{ session('mensaje')}}
+        </div>
+      @endif
     <div class="card-body">
       <h5 class="card-title">Congratulation {{ Auth::user()->name }}!!,
         this week you added 5000 points!</h5>

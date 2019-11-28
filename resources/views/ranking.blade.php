@@ -13,48 +13,18 @@
 >
   <div class="card text-center">
     <div class="card-header" style="font-weight:bold">
-      User score:
+      {{ucwords(Auth::user()->name) }} score:
     </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
-    <div class="row mb-1">
-      <div class="col-6">Frula</div>
-      <div class="col-6">15000 pts</div>
-    </div>
+
+    @forelse ($users as $user)
+      <div class="row mb-1">
+        <div class="col-6">{{ucwords($user['name'])}}</div>
+        <div class="col-6">15000 pts</div>
+      </div>
+    @empty
+      <p>No hay usuarios</p>
+    @endforelse
+
   </div>
 </div>
 @endsection
