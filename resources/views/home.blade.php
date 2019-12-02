@@ -14,6 +14,7 @@
   <a href="/play">
     <img src="img/Play_Button.png" class="play" alt="..."/>
   </a>
+  
     
 @endsection
 
