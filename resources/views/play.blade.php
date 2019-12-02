@@ -6,112 +6,49 @@
 <link rel="stylesheet" href="/css/jugar.css">
 <script>
 
-	var inicio=0;
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
 
-	var timeout=0;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
- 
+        display.textContent = minutes + ":" + seconds;
 
-	function empezarDetener(elemento)
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
 
-	{
+window.onload = function () {
+    var oneMinute = 60 * 1,
+        display = document.querySelector('#time');
+    startTimer(oneMinute, display);
+};
 
-		if(timeout==0)
 
-		{
 
-			// empezar el cronometro
-
- 
-
-			elemento.value="Detener";
-
- 
-
-			// Obtenemos el valor actual
-
-			inicio=vuelta=new Date().getTime();
-
- 
-
-			// iniciamos el proceso
-
-			funcionando();
-
-		}else{
-
-			// detemer el cronometro
-
- 
-
-			elemento.value="Empezar";
-
-			clearTimeout(timeout);
-
-			timeout=0;
-
-		}
-
-	}
-
- 
-
-	function funcionando()
-
-	{
-
-		// obteneos la fecha actual
-
-		var actual = new Date().getTime();
-
- 
-
-		// obtenemos la diferencia entre la fecha actual y la de inicio
-
-		var diff=new Date(actual-inicio);
-
- 
-
-		// mostramos la diferencia entre la fecha actual y la inicial
-
-		var result=LeadingZero(diff.getUTCHours())+":"+LeadingZero(diff.getUTCMinutes())+":"+LeadingZero(diff.getUTCSeconds());
-
-		document.getElementById('crono').innerHTML = result;
-
- 
-
-		// Indicamos que se ejecute esta función nuevamente dentro de 1 segundo
-
-		timeout=setTimeout("funcionando()",1000);
-
-	}
-
- 
-
-	/* Funcion que pone un 0 delante de un valor si es necesario */
-
-	function LeadingZero(Time) {
-
-		return (Time < 10) ? "0" + Time : + Time;
-
-	}
-
-	</script>
+</script>
 @endsection
 
 @section('content')
 
+	
+
   <div class="container pt-5">
     <div class="row">
-      <div class="col-6"><h2 class="float-left">Puntaje</h2></div>
-      <div class="col-6"><h2 class="float-right">Tiempo</h2></div>      
-      <div class="crono_wrapper col-12"><h2 id="crono" class="float-right">00:00:00</h2></div>
-      <input type="button" value="Empezar" onclick=empezarDetener(this);>
+	  <div class="col-6"><h2 class="float-left">Puntaje</h2></div>
+	  <div class="col-6"><h2 class="float-right">Tiempo</h2></div>
+	  <div class="puntos col-6"><h2 class="float-left">00000</h2></div>
+      <div class="col-6"><h2 id="time" class="float-right">01:00</h2></div>      
     </div>
   </div>
   <!-- preguntas  -->
   <div class="m-auto preguntas">
-    <h4 class="text-align-center">EL AGUA HIERVE A 95 GRADOS</h4>
+    <h4 class="text-align-right">EL AGUA HIERVE A 95 GRADOS</h4>
   </div>
     <!-- botones -->
     <div class=" text-center m-auto">
