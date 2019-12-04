@@ -12,7 +12,7 @@
   id="puntaje">
   <div class="card text-center">
     <div class="card-header user-img" style="font-weight:bold">
-      <img src="imgperfil/1.jpg" alt="" />
+      <img src="{{((Auth::user()->avatar)== null)?"imgperfil/1.jpg":Auth::user()->avatar}}" alt="" />
       {{ucwords(Auth::user()->name) }} total score:
       </div>
       @if(session('mensaje'))
@@ -21,7 +21,7 @@
         </div>
       @endif
     <div class="card-body">
-      <h5 class="card-title">Congratulation {{ Auth::user()->name }}!!,
+      <h5 class="card-title">Congratulation {{ucwords(Auth::user()->name) }}!!,
         this week you added 5000 points!</h5>
       <div>
         <a href="/home" class="btn mt-2 mb-3 abm">Return to main page</a>

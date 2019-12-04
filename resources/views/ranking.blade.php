@@ -19,7 +19,7 @@
     @forelse ($users as $user)
       <div class="row mb-1">
         <div class="col-6">{{ucwords($user['name'])}}</div>
-        <div class="col-6">15000 pts</div>
+        <div class="col-6">{{((Auth::user()->score)== 0)?"No Score":Auth::user()->score}}</div>
       </div>
     @empty
       <p>No hay usuarios</p>

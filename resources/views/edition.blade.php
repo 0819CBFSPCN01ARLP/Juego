@@ -12,7 +12,7 @@
     <h3>{{ucwords(Auth::user()->name) }}, insert your new data</h3>
 
     <div class="card-body">
-      <form action="/edition" method="post">
+      <form action="/edition" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
       <div>
         <label for="username">New Username</label>
@@ -23,9 +23,9 @@
         <input type="password" name="newPass" class="password"/> <br><br>
       </div>
       <div>
-        {{-- <label>New picture</label>
-          <input type="file" name="newAvatar" /> <br><br> <br>
-      </div> --}}
+        <label>New picture</label>
+          <input type="file" name="avatar" /> <br><br> <br>
+      </div>
       <input type="submit" class="button" value="Save changes" />
     </div>
   </form>

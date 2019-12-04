@@ -18,16 +18,19 @@ class editionController extends Controller
         $user->name=$req->newName;
       }
       if(($req->newPass)== null){
-        // $pass= Hash::make(Auth::user()->password);
           $user->password=Auth::user()->password;
       } else{
-      $user->password=$req->newPass;
+      $user->password=Hash::make($req->newPass);
     }
+
+    if(($req->avatar)== null){
+        $user->avatar=Auth::user()->avatar;
+    } else{
+    $user->avatar=$req->avatar;
+  }
     $user->email= Auth::user()->email;
 
       $user-> save();
       return redirect("/profile")->with('mensaje', 'Su perfil ha sido editado');
-
       }
-
 }

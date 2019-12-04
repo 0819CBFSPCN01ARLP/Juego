@@ -18,7 +18,8 @@ class CreateGameTable extends Migration
             $table->integer('points');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            // $table->timestamps('started_at');
+            $table->timestamp('started_at');
+            // $table->timestamp('ended_at');
         });
     }
 
