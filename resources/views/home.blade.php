@@ -7,13 +7,15 @@
 @endsection
 
 @section('content')
-  <div class="text-center">
+  <div class="text-center">    
     <h4>@guest Welcome @else Welcome {{ucwords(Auth::user()->name) }}@endguest!! click here to start your game! </h4>
   <br>
-  </div>
+  </div>  
   <a href="/play">
     <img src="img/Play_Button.png" class="play" alt="..."/>
   </a>
+  
+    
 @endsection
 
 
