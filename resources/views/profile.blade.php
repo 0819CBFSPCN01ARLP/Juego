@@ -12,7 +12,7 @@
   id="puntaje">
   <div class="card text-center">
     <div class="card-header user-img" style="font-weight:bold">
-      <img src="{{((Auth::user()->avatar)== null)?"imgperfil/1.jpg":Auth::user()->avatar}}" alt="" />
+      {{-- <img src="{{((Auth::user()->avatar)==null)?"imgperfil/photo.jpg":Auth::user()->avatar}}" alt="" /> --}}
       {{ucwords(Auth::user()->name) }} total score:
       </div>
       @if(session('mensaje'))

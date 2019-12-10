@@ -24,24 +24,33 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <div class="navbar-nav mr-auto">
+        <div class="navbar-nav mr-auto" id="puntajenav">
           @guest
           <a class="nav-item nav-link" href="/home">Home </a>
           <a class="nav-item nav-link" href="/contact">Contact</a>
           <a class="nav-item nav-link" href="/faq">FAQ</a>
           @else
+          {{-- @if((Auth::user()->email)!= "admin@hotmail.com") --}}
+          @if ((Auth::user()->avatar)!=  null)
+            <img src="{{Auth::user()->avatar}}" alt="" />            
+          @endif
           <a class="nav-item nav-link" href="/home">Home </a>
+          @if((Auth::user()->email)!= "admin@hotmail.com")
           <a class="nav-item nav-link" href="/contact">Contact</a>
           <a class="nav-item nav-link" href="/faq">FAQ</a>
+          @endif
           <a class="nav-item nav-link" href="/profile">Profile</a>
+          {{-- @endif --}}
+          @if((Auth::user()->email)== "admin@hotmail.com")
           <a class="nav-item nav-link" href="/abm">ABM</a>
+          @endif
           @endguest
         </div>
         <div class="navbar-nav ml-auto">
           @guest
          <a class="nav-item nav-link" href="/register">Register</a>
          <a class="nav-item nav-link" href="/login">Login</a>
-         @else         
+         @else
         <a class="nav-item nav-link" href="{{ route('logout') }}"
          onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">

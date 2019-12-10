@@ -26,11 +26,16 @@ class editionController extends Controller
     if(($req->avatar)== null){
         $user->avatar=Auth::user()->avatar;
     } else{
-    $user->avatar=$req->avatar;
-  }
-    $user->email= Auth::user()->email;
-
-      $user-> save();
-      return redirect("/profile")->with('mensaje', 'Su perfil ha sido editado');
+      // $pic= $req->avatar;
+      $ruta="imgperfil";
+      $file= $_FILES["avatar"]["tmp_name"];
+      $nombrearchivo= Auth::user()->id;
+      move_uploaded_file($file, $ruta."/".$nombrearchivo.".jpg");
+      $ruta= $ruta."/".$nombrearchivo.".jpg";
+      $user->avatar=$ruta;
       }
-}
+    $user->email= Auth::user()->email;
+    $user-> save();
+    return redirect("/profile")->with('mensaje', 'Su perfil ha sido editado');
+    }
+  }

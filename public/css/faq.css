@@ -9,7 +9,12 @@
   outline: none;
   color: white;
 }
-
+#puntaje img {
+  border-radius: 50%;
+  margin-top: 0px;
+  height: 30px;
+  width: 30px;
+}
 .btn-preguntas:hover {
   outline: none;
   color: white;

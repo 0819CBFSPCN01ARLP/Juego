@@ -23,17 +23,12 @@
         <input type="password" name="newPass" class="password"/> <br><br>
       </div>
       <div>
-<<<<<<< HEAD
+
         <label>New picture</label>
           <input type="file" name="avatar" /> <br><br> <br>
       </div>
       <input type="submit" class="button" value="Save changes" />
-=======
-        {{-- <label>New picture</label>
-          <input type="file" name="newAvatar" /> <br><br> <br>
-      </div> --}}
-      <input type="submit" class="btn" value="Save changes" />
->>>>>>> 751cebe617168ec2c82845f5aba4ac1fc89ef378
+
     </div>
   </form>
   </div>

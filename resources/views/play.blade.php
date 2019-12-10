@@ -35,19 +35,25 @@ window.onload = function () {
 @endsection
 
 @section('content')
-  
+
 
   <div class="container pt-5">
     <div class="row">
 	  <div class="col-6"><h2 class="float-left">Puntaje</h2></div>
 	  <div class="col-6"><h2 class="float-right">Tiempo</h2></div>
 	  <div class="puntos col-6"><h2 class="float-left">00000</h2></div>
-      <div class="col-6"><h2 id="time" class="float-right">01:00</h2></div>      
+      <div class="col-6"><h2 id="time" class="float-right"></h2></div>
     </div>
   </div>
   <!-- preguntas  -->
   <div class="m-auto preguntas">
-    <h4 class="text-align-right">EL AGUA HIERVE A 95 GRADOS</h4>
+    <h4 class="text-align-right">
+      @forelse ($questions as $q)
+        {{$q['text']}}
+      @empty
+
+      @endforelse
+    </h4>
   </div>
     <!-- botones -->
     <div class=" text-center m-auto">
