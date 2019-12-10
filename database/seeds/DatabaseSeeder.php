@@ -21,16 +21,24 @@ class DatabaseSeeder extends Seeder
              'created_at' => date('Y-m-d H:m:s'),
              'updated_at' => date('Y-m-d H:m:s')
          ]);
-       DB::table('users')->insert([
-             'id' => 2,
-             'name' => "ceci",
-             'email' => 'ccy_009@hotmail.com',
-             'password' => bcrypt('12345678'),
-             'created_at' => date('Y-m-d H:m:s'),
-             'updated_at' => date('Y-m-d H:m:s')
-         ]);
-
-         // CATEGORY
+         DB::table('users')->insert([
+           'id' => 2,
+           'name' => "ceci",
+           'email' => 'ccy_009@hotmail.com',
+           'password' => bcrypt('12345678'),
+           'created_at' => date('Y-m-d H:m:s'),
+           'updated_at' => date('Y-m-d H:m:s')
+           ]);
+           
+           DB::table('users')->insert([
+                 'id' => 3,
+                 'name' => "pablo",
+                 'email' => 'pablo@hotmail.com',
+                 'password' => bcrypt('12345678'),                 
+                 'created_at' => date('Y-m-d H:m:s'),
+                 'updated_at' => date('Y-m-d H:m:s')
+             ]);
+           // CATEGORY
          DB::table('category')->insert([
            'id' => 1,
            'name' => "Ciencia",
