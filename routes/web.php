@@ -25,6 +25,8 @@ Route::get('/home', function () {
 
 Route::get('/play', "playController@showQuestions");
 
+Route::post('/answerQuestion', "playController@answerQuestion");
+
 Route::get('/abm', "abmController@list");
 Route::get('/abm/{id}', "abmController@showModify");
 
