@@ -79,17 +79,81 @@ class DatabaseSeeder extends Seeder
              'value' => '1',
              'category_id' => '2'
          ]);
+       DB::table('questions')->insert([
+             'id' => 4,
+             'text' => "La capital mas al norte del planeta es Reikiavik",
+             'value' => '1',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 5,
+             'text' => "Actualmente hay 1500 volcanes activos en todo el mundo",
+             'value' => '1',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 6,
+             'text' => "El monte Everest se encuentra en la frontera de China y Nepal",
+             'value' => '1',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 7,
+             'text' => "El estrecho de Gibraltar separa España y Marruecos",
+             'value' => '1',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 8,
+             'text' => "Serbia no tiene acceso al Mar Mediterraneo",
+             'value' => '1',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 9,
+             'text' => "Riga es la capital de Estonia",
+             'value' => '0',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 10,
+             'text' => "Hay 6 oceanos en todo el mundo",
+             'value' => '0',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 11,
+             'text' => "El mundo posee 5 continentes",
+             'value' => '0',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 12,
+             'text' => "El rio mas largo del mundo es el Amazonas",
+             'value' => '0',
+             'category_id' => '2'
+         ]);
+       DB::table('questions')->insert([
+             'id' => 13,
+             'text' => "El Desierto de Gobi se encuenta en Africa",
+             'value' => '0',
+             'category_id' => '2'
+         ]);
+         
+        //  LEVELS
+        DB::table('levels')->insert([
+          'id' => 1,
+          'time' => 60,
+          'score' => 10,
+      ]);
+    DB::table('levels')->insert([
+          'id' => 2,
+          'time' => 40,
+          'score' => 20,
+      ]);
+  }
+}
 
-    // LEVELS
-       DB::table('levels')->insert([
-             'id' => 1,
-             'time' => 60,
-             'score' => 10,
-         ]);
-       DB::table('levels')->insert([
-             'id' => 2,
-             'time' => 40,
-             'score' => 20,
-         ]);
-     }
- }
+
+   
+ 
