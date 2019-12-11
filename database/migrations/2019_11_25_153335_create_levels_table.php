@@ -16,11 +16,10 @@ class CreateLevelsTable extends Migration
         Schema::create('levels', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->integer('success')->nullable();
-          $table->integer('number');
           $table->integer('time');
           $table->integer('score')->nullable();
-          $table->unsignedBigInteger('game_id')->nullable();
-          $table->foreign('game_id')->references('id')->on('game');
+          // $table->unsignedBigInteger('game_id')->nullable();
+          // $table->foreign('game_id')->references('id')->on('game');
           // $table->timestamps();
         });
     }

@@ -83,13 +83,13 @@ class DatabaseSeeder extends Seeder
     // LEVELS
        DB::table('levels')->insert([
              'id' => 1,
-             'number' => "1",
-             'time' => '60',
+             'time' => 60,
+             'score' => 10,
          ]);
        DB::table('levels')->insert([
              'id' => 2,
-             'number' => "2",
-             'time' => '40',
+             'time' => 40,
+             'score' => 20,
          ]);
      }
  }

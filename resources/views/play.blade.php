@@ -5,31 +5,31 @@
 @section('head')
 <link rel="stylesheet" href="/css/jugar.css">
 <script>
-
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
-
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-
         display.textContent = minutes + ":" + seconds;
-
         if (--timer < 0) {
             timer = duration;
         }
     }, 1000);
 }
-
 window.onload = function () {
     var oneMinute = 60 * 1,
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
 };
 
-
+function pruebaV(){
+  fetch("/answerQuestion")
+}
+function pruebaF(){
+  // console.log("funciono")
+}
 
 </script>
 @endsection
@@ -47,19 +47,17 @@ window.onload = function () {
   </div>
   <!-- preguntas  -->
   <div class="m-auto preguntas">
-    <h4 class="text-align-right">
-      @forelse ($questions as $q)
-        {{$q['text']}}
-      @empty
-
-      @endforelse
+    <h4 class="text-align-right ">
+        {{$question}}
     </h4>
   </div>
     <!-- botones -->
     <div class=" text-center m-auto">
-      <button type="submit" name="1" class="btn btn-success btn-lg true m-auto" style="">VERDADERO</button>
-      <br><br>
-      <button type="submit" name="0" class="btn btn-danger btn-lg btn false m-auto">FALSO</button>
+
+      <button onclick="pruebaV()" type="submit" name="1" class="btn btn-success btn-lg true m-auto" style="">VERDADERO</button>
+
+
+        <button onclick="pruebaF()" type="submit" name="0" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>
     </div>
   </div>
 @endsection
