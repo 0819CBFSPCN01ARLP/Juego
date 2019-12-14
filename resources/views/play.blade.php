@@ -31,6 +31,8 @@ function pruebaF(){
   // console.log("funciono")
 }
 
+
+
 </script>
 @endsection
 
