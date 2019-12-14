@@ -25,15 +25,28 @@ window.onload = function () {
 };
 
 function pruebaV(){
-  fetch("/answerQuestion")
-}
+  fetch("/answerQuestion/{{$newGame}}/V")
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+
+    // si la respuesta coincide con el value de la pregunta
+    // hacer un inner del puntaje + el inner ya existente
+    //
+
+  })
+  .catch(function(error){
+    console.log(error);
+  })
+};
+
 function pruebaF(){
   // console.log("funciono")
 }
 
-
-
 </script>
+
 @endsection
 
 @section('content')
@@ -61,18 +74,14 @@ function pruebaF(){
 
         <button onclick="pruebaF()" type="submit" name="0" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>
     </div>
+    <h2>
+      Game: {{$newGame}} <br>
+      Puntaje: {{$newGame->points}}<br>
+      Inicio partida: {{$newGame->started_at}}<br>
+      Id Pregunta: {{$question->id}}<br>
+      Level: {{$level}}<br>
+      Tiempo maximo: {{$level->time}}
+
+    </h2>
   </div>
 @endsection
-
-{{-- @forelse ($questions as $q)
-  <div class="m-auto preguntas">
-    <h4 class="text-align-center">{{$q['text']}}</h4>
-  </div>
-@empty
-  <p>No hay usuarios</p>
-@endforelse --}}
-
-{{-- COMO JUGAR: Elegí tu primer categoría para comenzar a jugar el Nivel 1, donde tendrás
-10 preguntas de 10ptos cada una y que deberás responder antes de 1'. Al pasar de Nivel,
-elegirás la siguiente categoría, el puntaje por acierto será mayor pero ojo! que el
-tiempo se reduce. Las categorías pueden elegirse una sola vez! --}}
