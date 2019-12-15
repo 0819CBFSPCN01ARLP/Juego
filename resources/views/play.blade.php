@@ -25,12 +25,12 @@ window.onload = function () {
 };
 
 function pruebaV(){
-  fetch("/answerQuestion/{{$newGame}}/V")
+  fetch("/answerQuestion/{{$newGame->id}}/1")
   .then(function(response){
     return response.json();
   })
   .then(function(data){
-
+    var audioError = document.getElementById("verdadero");
     // si la respuesta coincide con el value de la pregunta
     // hacer un inner del puntaje + el inner ya existente
     //
@@ -42,8 +42,13 @@ function pruebaV(){
 };
 
 function pruebaF(){
-  // console.log("funciono")
+  
+var audioError = document.getElementById("error");
+
+audio.play();
 }
+
+
 
 </script>
 
@@ -69,16 +74,21 @@ function pruebaF(){
     <!-- botones -->
     <div class=" text-center m-auto">
 
+        <audio id="audio" controls autoplay loop>
+            <source type="audio/wav" src="audio/error.wav">
+          </audio>
+
       <button onclick="pruebaV()" type="submit" name="1" class="btn btn-success btn-lg true m-auto" style="">VERDADERO</button>
 
 
         <button onclick="pruebaF()" type="submit" name="0" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>
+         
     </div>
     <h2>
       Game: {{$newGame}} <br>
       Puntaje: {{$newGame->points}}<br>
+      Id Partida: {{$newGame->id}}<br>
       Inicio partida: {{$newGame->started_at}}<br>
-      Id Pregunta: {{$question->id}}<br>
       Level: {{$level}}<br>
       Tiempo maximo: {{$level->time}}
 
