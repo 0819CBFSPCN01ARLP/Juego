@@ -20,7 +20,7 @@ function startTimer(duration, display) {
     }, 1000);
 }
 window.onload = function () {
-    var oneMinute = 60 * 1,
+    var oneMinute = 59 * 1,
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
   };
@@ -76,11 +76,14 @@ async function pruebaF(){
 
 @section('content')
   <div class="container pt-5">
+      <audio id="audio" controls autoplay>
+        <source type="audio/wav" src="audio/principal.wav">
+      </audio>
     <div class="row">
 	  <div class="col-6"><h2 class="float-left">Score</h2></div>
 	  <div class="col-6"><h2 class="float-right">Timer</h2></div>
 	  <div class="puntos col-6"><h2  id="score" class="float-left">{{$newGame->points}}</h2></div>
-      <div class="col-6"><h2 id="time" class="float-right"></h2></div>
+      <div class="col-6"><h2 id="time" class="float-right">01:00</h2></div>
     </div>
   </div>
   <!-- preguntas  -->
@@ -91,10 +94,6 @@ async function pruebaF(){
   </div>
     <!-- botones -->
     <div class=" text-center m-auto">
-      {{-- <audio id="audio" controls autoplay loop>
-        <source type="audio/wav" src="audio/error.wav">
-      </audio> --}}
-
       <button onclick="pruebaV()" class="btn btn-success btn-lg true m-auto">VERDADERO</button>
       <button onclick="pruebaF()" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>
     </div><br><br><br>
