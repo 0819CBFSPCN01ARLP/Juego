@@ -36,9 +36,13 @@ async function pruebaV(){
     document.querySelector("#score").innerHTML = data.newGame.points
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
-
+    document.getElementById("true").onclick = sonidoTrue
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
     // var audioError = document.getElementById("verdadero");
+    function sonidoTrue() {
+      var sonido_true = document.getElementById("audioTrue");
+        sonido_true.play();
+     }
 
   })
 
@@ -58,7 +62,7 @@ async function pruebaF(){
     document.querySelector("#score").innerHTML = data.newGame.points
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
-
+    
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
     // var audioError = document.getElementById("error");
 
@@ -95,7 +99,13 @@ async function pruebaF(){
     <!-- botones -->
     <div class=" text-center m-auto">
       <button onclick="pruebaV()" class="btn btn-success btn-lg true m-auto">VERDADERO</button>
+      <audio id="audioTrue" controls>
+        <source type="audio/wav" src="audio/true.wav">
+      </audio>
       <button onclick="pruebaF()" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>
+      <audio id="audioFalse" controls>
+        <source type="audio/wav" src="audio/false.wav">
+      </audio>
     </div><br><br><br>
 
     <h2>Id partida: {{$newGame->id}}</h2>

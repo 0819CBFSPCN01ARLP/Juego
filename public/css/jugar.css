@@ -35,6 +35,14 @@ h4 {
     text-decoration: underline;
 }
 
+#audioTrue {
+    display: none;
+}
+
+#audioFalse {
+    display: none;
+}
+
 @media (max-width: 575.98px) {
     h1 {
         font-size: 30px;
