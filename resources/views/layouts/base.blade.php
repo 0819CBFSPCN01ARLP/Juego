@@ -17,9 +17,9 @@
     @yield('head')
     <script>
     //AUDIO
-    var audio = document.getElementById("audio");
+    // var audio = document.getElementById("audio");
 
-    audio.play();
+    // audio.play();
     </script>
   </head>
 
@@ -35,26 +35,26 @@
           <a class="nav-item nav-link" href="/home">Home </a>
           <a class="nav-item nav-link" href="/contact">Contact</a>
           <a class="nav-item nav-link" href="/faq">FAQ</a>
-          <audio id="audio" controls autoplay loop>
+          {{-- <audio id="audio" controls autoplay loop>
             <source type="audio/wav" src="audio/principal.wav">
-            </audio>
+            </audio> --}}
           @else
           {{-- @if((Auth::user()->email)!= "admin@hotmail.com") --}}
           @if ((Auth::user()->avatar)!=  null)
             <img src="{{Auth::user()->avatar}}" alt="" />
             {{-- //AUDIO --}}
-            <audio id="audio" controls autoplay loop>
+            {{-- <audio id="audio" controls autoplay loop>
               <source type="audio/wav" src="audio/principal.wav">
-              </audio>
+              </audio> --}}
             @else
               <img src="imgperfil/photo.jpg" alt="" />
           @endif
           <a class="nav-item nav-link" href="/home">Home </a>
           @if((Auth::user()->email)!= "admin@hotmail.com")
             {{-- //AUDIO --}}
-          <audio id="audio" controls autoplay loop>
+          {{-- <audio id="audio" controls autoplay loop>
             <source type="audio/wav" src="audio/principal.wav">
-            </audio>
+            </audio> --}}
           <a class="nav-item nav-link" href="/contact">Contact</a>
           <a class="nav-item nav-link" href="/faq">FAQ</a>
           @endif

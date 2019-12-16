@@ -34,11 +34,11 @@ async function pruebaV(){
     // ACA SE TRAE LA NUEVA PREGUNTA Y EL SCORE ACTUALIZADO POR AJAX
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
-        document.querySelector("#answer").innerHTML ='ID Ultima pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
+        document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
 
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
-    var audioError = document.getElementById("verdadero");
+    // var audioError = document.getElementById("verdadero");
 
   })
 
@@ -56,13 +56,13 @@ async function pruebaF(){
     // ACA SE TRAE LA NUEVA PREGUNTA Y EL SCORE ACTUALIZADO POR AJAX
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
-        document.querySelector("#answer").innerHTML ='ID Ultima pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
+        document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
 
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
-    var audioError = document.getElementById("error");
+    // var audioError = document.getElementById("error");
 
-    audio.play();
+    // audio.play();
   })
 
   .catch(function(error){
@@ -91,9 +91,9 @@ async function pruebaF(){
   </div>
     <!-- botones -->
     <div class=" text-center m-auto">
-      <audio id="audio" controls autoplay loop>
+      {{-- <audio id="audio" controls autoplay loop>
         <source type="audio/wav" src="audio/error.wav">
-      </audio>
+      </audio> --}}
 
       <button onclick="pruebaV()" class="btn btn-success btn-lg true m-auto">VERDADERO</button>
       <button onclick="pruebaF()" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>

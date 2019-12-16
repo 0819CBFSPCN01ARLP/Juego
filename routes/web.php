@@ -12,16 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect('/home');
 });
 
 Auth::routes();
 
-
 Route::get('/home', function () {
     return view('home');
 });
-
 
 Route::get('/play', "playController@showQuestions");
 
