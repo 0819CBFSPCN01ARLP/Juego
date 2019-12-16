@@ -5,6 +5,7 @@
 @section('head')
 <link rel="stylesheet" href="/css/jugar.css">
 <script>
+//ARRANCA EL TIMER
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -22,46 +23,63 @@ window.onload = function () {
     var oneMinute = 60 * 1,
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
-};
+  };
 
-function pruebaV(){
+async function pruebaV(){
   fetch("/answerQuestion/{{$newGame->id}}/1")
   .then(function(response){
     return response.json();
   })
   .then(function(data){
-    var audioError = document.getElementById("verdadero");
-    // si la respuesta coincide con el value de la pregunta
-    // hacer un inner del puntaje + el inner ya existente
-    //
+    // ACA SE TRAE LA NUEVA PREGUNTA Y EL SCORE ACTUALIZADO POR AJAX
+    document.querySelector("h4").innerHTML = data.question
+    document.querySelector("#score").innerHTML = data.newGame.points
+        document.querySelector("#answer").innerHTML ='ID Ultima pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
+    console.log(data)
+
+    // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
+    // var audioError = document.getElementById("verdadero");
 
   })
+
   .catch(function(error){
-    console.log(error);
+    // console.log(error);
   })
 };
 
-function pruebaF(){
-  
-var audioError = document.getElementById("error");
+async function pruebaF(){
+  fetch("/answerQuestion/{{$newGame->id}}/0")
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    // ACA SE TRAE LA NUEVA PREGUNTA Y EL SCORE ACTUALIZADO POR AJAX
+    document.querySelector("h4").innerHTML = data.question
+    document.querySelector("#score").innerHTML = data.newGame.points
+        document.querySelector("#answer").innerHTML ='ID Ultima pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
+    console.log(data)
 
-audio.play();
-}
+    // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
+    // var audioError = document.getElementById("error");
 
+    // audio.play();
+  })
 
+  .catch(function(error){
+    // console.log(error);
+  })
+};
 
 </script>
 
 @endsection
 
 @section('content')
-
-
   <div class="container pt-5">
     <div class="row">
-	  <div class="col-6"><h2 class="float-left">Puntaje</h2></div>
-	  <div class="col-6"><h2 class="float-right">Tiempo</h2></div>
-	  <div class="puntos col-6"><h2 class="float-left">00000</h2></div>
+	  <div class="col-6"><h2 class="float-left">Score</h2></div>
+	  <div class="col-6"><h2 class="float-right">Timer</h2></div>
+	  <div class="puntos col-6"><h2  id="score" class="float-left">{{$newGame->points}}</h2></div>
       <div class="col-6"><h2 id="time" class="float-right"></h2></div>
     </div>
   </div>
@@ -73,25 +91,15 @@ audio.play();
   </div>
     <!-- botones -->
     <div class=" text-center m-auto">
+      {{-- <audio id="audio" controls autoplay loop>
+        <source type="audio/wav" src="audio/error.wav">
+      </audio> --}}
 
-        <audio id="audio" controls autoplay loop>
-            <source type="audio/wav" src="audio/error.wav">
-          </audio>
+      <button onclick="pruebaV()" class="btn btn-success btn-lg true m-auto">VERDADERO</button>
+      <button onclick="pruebaF()" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>
+    </div><br><br><br>
 
-      <button onclick="pruebaV()" type="submit" name="1" class="btn btn-success btn-lg true m-auto" style="">VERDADERO</button>
-
-
-        <button onclick="pruebaF()" type="submit" name="0" class="btn btn-danger btn-lg btn false pl-5 pr-5">FALSO</button>
-         
-    </div>
-    <h2>
-      Game: {{$newGame}} <br>
-      Puntaje: {{$newGame->points}}<br>
-      Id Partida: {{$newGame->id}}<br>
-      Inicio partida: {{$newGame->started_at}}<br>
-      Level: {{$level}}<br>
-      Tiempo maximo: {{$level->time}}
-
-    </h2>
+    <h2>Id partida: {{$newGame->id}}</h2>
+    <h2 id="answer"></h2> <br>
   </div>
 @endsection

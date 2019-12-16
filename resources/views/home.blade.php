@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-  <div class="text-center">    
+  <div class="text-center">
     <h4>@guest Welcome @else Welcome {{ucwords(Auth::user()->name) }}@endguest!! Click Play to start your game or<button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">see the rules!!!
     </button></h4>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,22 +31,10 @@
       </div>
     </div>
   <br>
-  </div>  
+  </div>
   <a href="/play">
     <img src="img/Play_Button.png" class="play" alt="..."/>
   </a>
-  
-    
+
+
 @endsection
-
-
-
-  {{-- <div class="card-body">
-      @if (session('status'))
-          <div class="alert alert-success" role="alert">
-              {{ session('status') }}
-          </div>
-      @endif
-
-      You are logged in!
-  </div> --}}
