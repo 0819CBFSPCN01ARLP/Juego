@@ -6,11 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
     background-image: url("../img/mobile.JPG");
-=======
-    background-image: url("../img/mobile.jpg");
->>>>>>> 859803d45afce8da3edac0e0b652dcb147fc455e
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -62,11 +58,7 @@ img.play {
         margin-top: 3vh;
     }
     body {
-<<<<<<< HEAD
         background-image: url("../img/desktop.JPG");
-=======
-        background-image: url("../img/desktop.jpg");
->>>>>>> 859803d45afce8da3edac0e0b652dcb147fc455e
     }
     #puntajenav img {
         display: block;
