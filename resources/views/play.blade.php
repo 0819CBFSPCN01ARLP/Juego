@@ -23,9 +23,11 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = minutes + ":" + seconds;
+        
         if (--timer < 0) {
           clearInterval(myInterval);
           dingPrueba.play();
+          confirm("Se acabo su tiempo!\n Desea jugar de nuevo?");
         }
     },1000);
 }
@@ -48,11 +50,11 @@ async function pruebaV(){
     document.querySelector("#score").innerHTML = data.newGame.points
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
-       if (data.answer = true) {
-      sonido_true.play();         
-       } else{
-         sonido_false.play();
-       }
+    if(data.answer === true){
+        sonido_true.play()//La respuesta fue bien contestada
+      } else{
+        sonido_false.play(); //La respuesta fue mal contestada
+      }
           
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
     // var audioError = document.getElementById("verdadero");
@@ -79,11 +81,11 @@ async function pruebaF(){
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
-    if (data.answer = true) {
-      sonido_true.play();
-    } else{
-      sonido_false.play();
-    }   
+    if(data.answer === false){
+        sonido_false.play()//La respuesta fue bien contestada
+      } else{
+        sonido_true.play(); //La respuesta fue mal contestada
+      }
           
       
   })

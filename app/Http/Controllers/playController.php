@@ -46,7 +46,7 @@ class playController extends Controller
       //===== CALCULO DE TIEMPO =====
       $now=time();    //traigo segundo actual
       $started=$newGame->started_at;  //traigo segundo en el que comenzo la partida actual
-      if($now >= ($started+60)){
+      if($now >= ($started+63)){
         return redirect ("/ranking");
       }
 
