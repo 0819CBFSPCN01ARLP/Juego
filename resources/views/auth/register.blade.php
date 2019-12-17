@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-  <section class="container col-lg-8 col-md-8 col-sm-12 login-box mt-5">
+  <section class="container col-lg-10 col-md-10 col-sm-10 col xs-6 login-box mt-5">
     <form method="POST" action="{{ route('register') }}">
         {{csrf_field()}}
 <fieldset>

@@ -27,7 +27,8 @@ function startTimer(duration, display) {
         if (--timer < 0) {
           clearInterval(myInterval);
           dingPrueba.play();
-          confirm("Se acabo su tiempo!\n Desea jugar de nuevo?");
+          $('#myModal').modal()
+          //confirm("Se acabo su tiempo!\n Desea jugar de nuevo?");
         }
     },1000);
 }
