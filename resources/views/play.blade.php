@@ -5,19 +5,29 @@
 @section('head')
 <link rel="stylesheet" href="/css/jugar.css">
 <script>
+
+/* document.getElementById("audioTrue").onclick = sonidoTrue;
+
+    function sonidoTrue() {
+      var sonido_true = document.getElementById("audioTrue");
+        sonido_true.play();
+     } */
+
 //ARRANCA EL TIMER
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    setInterval(function () {
+    var myInterval = setInterval(function () {
+        var dingPrueba = document.getElementById("ding")
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = minutes + ":" + seconds;
         if (--timer < 0) {
-            timer = duration;
+          clearInterval(myInterval);
+          dingPrueba.play();
         }
-    }, 1000);
+    },1000);
 }
 window.onload = function () {
     var oneMinute = 59 * 1,
@@ -32,17 +42,21 @@ async function pruebaV(){
   })
   .then(function(data){
     // ACA SE TRAE LA NUEVA PREGUNTA Y EL SCORE ACTUALIZADO POR AJAX
+    var sonido_false = document.getElementById("audioFalse");
+    var sonido_true = document.getElementById("audioTrue");
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
-    document.getElementById("true").onclick = sonidoTrue
+       if (data.answer = true) {
+      sonido_true.play();         
+       } else{
+         sonido_false.play();
+       }
+          
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
     // var audioError = document.getElementById("verdadero");
-    function sonidoTrue() {
-      var sonido_true = document.getElementById("audioTrue");
-        sonido_true.play();
-     }
+    
 
   })
 
@@ -58,15 +72,20 @@ async function pruebaF(){
   })
   .then(function(data){
     // ACA SE TRAE LA NUEVA PREGUNTA Y EL SCORE ACTUALIZADO POR AJAX
+    var sonido_false = document.getElementById("audioFalse");
+    var sonido_true = document.getElementById("audioTrue");
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     console.log(data)
-    
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
-    // var audioError = document.getElementById("error");
-
-    // audio.play();
+    if (data.answer = true) {
+      sonido_true.play();
+    } else{
+      sonido_false.play();
+    }   
+          
+      
   })
 
   .catch(function(error){
@@ -82,6 +101,15 @@ async function pruebaF(){
   <div class="container pt-5">
       <audio id="audio" controls autoplay>
         <source type="audio/wav" src="audio/principal.wav">
+      </audio>
+      <audio id="audioTrue" controls>
+        <source type="audio/wav" src="audio/true.wav">
+      </audio>
+      <audio id="audioFalse" controls>
+        <source type="audio/wav" src="audio/false.wav">
+      </audio>
+      <audio id="ding" controls>
+        <source type="audio/wav" src="audio/ding.mp3">
       </audio>
     <div class="row">
 	  <div class="col-6"><h2 class="float-left">Score</h2></div>
