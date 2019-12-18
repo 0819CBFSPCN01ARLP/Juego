@@ -20,8 +20,8 @@
             </button>
           </div>
           <div class="modal-body text-align-center">
-            You will have to answer all the questions that you can within 1 minute, where each correct question will give you 10 points.
-            Be careful,  because there are questions of diferent types of categories!
+            You will have to answer all the questions that you can within 1 minute, where each correct question will give you 30 points, BUT each wrong question will take you 10 points.
+            Be careful, because there are questions of diferent types of categories!
             Now, get ready, set and Go!
           </div>
           <div class="modal-footer">
