@@ -8,7 +8,7 @@
 
 @section('content')
   <div class="container">
-  <section class="login-box text-center">
+  <section class="login-box text-center ml-auto mr-auto">
     <form method="POST" action="{{ route('login') }}">
         @csrf
 

@@ -14,15 +14,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Reglas del juego</h5>
+            <h5 class="modal-title" id="exampleModalLabel">How to Play</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body text-align-center">
-            Tendras que contestar la mayor cantidad de preguntas en el lapso de 1 minuto, donde cada pregunta correcta suma 10 puntos.
-            Atento porque hay preguntas de todas las categorias!
-            Ahora si, dale Play y a jugar!
+            You will have to answer all the questions that you can within 1 minute, where each correct question will give you 10 points.
+            Be careful,  because there are questions of diferent types of categories!
+            Now, get ready, set and Go!
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

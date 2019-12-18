@@ -381,12 +381,12 @@ class DatabaseSeeder extends Seeder
         DB::table('levels')->insert([
           'id' => 1,
           'time' => 60,
-          'score' => 10,
+          'score' => 30,
       ]);
     DB::table('levels')->insert([
           'id' => 2,
           'time' => 40,
-          'score' => 20,
+          'score' => 60,
       ]);
   }
 }

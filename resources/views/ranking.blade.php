@@ -13,7 +13,7 @@
 >
   <div class="card text-center">
     <div class="card-header" style="font-weight:bold">
-      {{ucwords(Auth::user()->name) }} score:
+      Top 10:
     </div>
 
     @forelse ($users as $user)

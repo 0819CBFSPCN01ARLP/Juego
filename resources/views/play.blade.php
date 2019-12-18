@@ -23,9 +23,20 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = minutes + ":" + seconds;
+
         if (--timer < 0) {
           clearInterval(myInterval);
           dingPrueba.play();
+          confirm("Se acabo su tiempo!\n Desea jugar de nuevo?");
+          $('#myModal').modal()
+
+          //confirm("Se acabo su tiempo!\n Desea jugar de nuevo?");
+        //   var rta= confirm("Se acabo su tiempo!\n Desea jugar de nuevo?");
+        //   if (rta==true){
+        //     location.replace("/play")
+        //   }else{
+        //     location.replace("/ranking")
+        //   }
         }
     },1000);
 }
@@ -47,19 +58,13 @@ async function pruebaV(){
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
-    console.log(data)
-       if (data.answer = true) {
-      sonido_true.play();         
-       } else{
-         sonido_false.play();
-       }
-          
-    // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
-    // var audioError = document.getElementById("verdadero");
-    
-
+    // console.log(data)
+    if(data.answer === true){
+        sonido_true.play()//La respuesta fue bien contestada
+      } else{
+        sonido_false.play(); //La respuesta fue mal contestada
+      }
   })
-
   .catch(function(error){
     // console.log(error);
   })
@@ -77,17 +82,14 @@ async function pruebaF(){
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
         document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
-    console.log(data)
+    // console.log(data)
     // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
-    if (data.answer = true) {
-      sonido_true.play();
-    } else{
-      sonido_false.play();
-    }   
-          
-      
+    if(data.answer === false){
+        sonido_false.play()//La respuesta fue bien contestada
+      } else{
+        sonido_true.play(); //La respuesta fue mal contestada
+      }
   })
-
   .catch(function(error){
     // console.log(error);
   })
@@ -119,7 +121,7 @@ async function pruebaF(){
     </div>
   </div>
   <!-- preguntas  -->
-  <div class="m-auto preguntas">
+  <div class="m-auto preguntas ">
     <h4 class="text-align-right ">
         {{$question}}
     </h4>
@@ -136,7 +138,7 @@ async function pruebaF(){
       </audio>
     </div><br><br><br>
 
-    <h2>Id partida: {{$newGame->id}}</h2>
-    <h2 id="answer"></h2> <br>
+    {{-- <h2>Id partida: {{$newGame->id}}</h2>
+    <h2 id="answer"></h2> <br> --}}
   </div>
 @endsection
