@@ -382,11 +382,11 @@ class DatabaseSeeder extends Seeder
           'id' => 1,
           'time' => 60,
           'score' => 30,
-      ]);
-    DB::table('levels')->insert([
-          'id' => 2,
-          'time' => 40,
-          'score' => 60,
-      ]);
+        ]);
+        DB::table('levels')->insert([
+            'id' => 2,
+            'time' => 40,
+            'score' => 60,
+        ]);
   }
 }
