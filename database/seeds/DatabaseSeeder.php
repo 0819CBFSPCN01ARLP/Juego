@@ -376,6 +376,306 @@ class DatabaseSeeder extends Seeder
              'value' => '1',
              'category_id' => '5'
          ]);
+         DB::table('questions')->insert([
+            'id' => 54,
+            'text' => "La principical funcion del intestino grueso es la absorcion de nutrientes",
+            'value' => '0',
+            'category_id' => '1'
+        ]);
+         DB::table('questions')->insert([
+            'id' => 55,
+            'text' => "La sublimacion es el paso del estado gaseoso al estado solido",
+            'value' => '0',
+            'category_id' => '1'
+        ]);
+         DB::table('questions')->insert([
+            'id' => 56,
+            'text' => "La bilis es segregada por el pancreas",
+            'value' => '0',
+            'category_id' => '1'
+        ]);
+         DB::table('questions')->insert([
+            'id' => 57,
+            'text' => "La sacarina se saca del azucar",
+            'value' => '0',
+            'category_id' => '1'
+        ]);
+         DB::table('questions')->insert([
+            'id' => 58,
+            'text' => "Un icosaedro tiene 24 caras",
+            'value' => '0',
+            'category_id' => '1'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 59,
+            'text' => "El calostro se denomina a la primer leche materna",
+            'value' => '1',
+            'category_id' => '1'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 60,
+            'text' => "El hueso mas pequeño del cuerpo humano es el estribo",
+            'value' => '1',
+            'category_id' => '1'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 61,
+            'text' => "El estudio de los peces se denomina ictiologia",
+            'value' => '1',
+            'category_id' => '1'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 62,
+            'text' => "La leche se transforma en yogurt por una bacteria",
+            'value' => '1',
+            'category_id' => '1'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 63,
+            'text' => "El nivel mas alto del mar es denominado pleamar",
+            'value' => '1',
+            'category_id' => '1'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 64,
+            'text' => "Argentina limita con 6 paises",
+            'value' => '0',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 65,
+            'text' => "Zurich es la capital de Suiza",
+            'value' => '0',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 66,
+            'text' => "El rio Segura, desemboca en el mar Cantabrico",
+            'value' => '0',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 67,
+            'text' => "Los Angeles, es la capital de California",
+            'value' => '0',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 68,
+            'text' => "Pyongyang es la capital de Corea del Sur",
+            'value' => '0',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 69,
+            'text' => "El ingles, es el idioma oficial de Ghana",
+            'value' => '1',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 70,
+            'text' => "Las torres Petronas, se encuentran en Malasia",
+            'value' => '1',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 71,
+            'text' => "Chad no tiene salida a la costa",
+            'value' => '1',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 72,
+            'text' => "La bandera de china tiene 5 estrellas",
+            'value' => '1',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 73,
+            'text' => "Luxemburgo, es la capital de Luxemburgo",
+            'value' => '1',
+            'category_id' => '2'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 74,
+            'text' => "Fernando Alonso gano 4 mundiales consecutivos de F1",
+            'value' => '0',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 75,
+            'text' => "Joe Di Maggio se dedicaba al Boxeo",
+            'value' => '0',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 76,
+            'text' => "Una baraja inglesa tiene 50 naipes",
+            'value' => '0',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 77,
+            'text' => "Brasil fue subcampeon en el mundial de futbol Corea-Japon de 2002",
+            'value' => '0',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 78,
+            'text' => "Fernando Hierro es el jugador con mayor presencias en la Seleccion Española",
+            'value' => '0',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 79,
+            'text' => "La ultima prueba de un decatlon son los 1500 metros",
+            'value' => '1',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 80,
+            'text' => "La MLB es la liga de Baseball",
+            'value' => '1',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 81,
+            'text' => "Los juegos olimpicos de 2016 se realizaron en Rio",
+            'value' => '1',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 82,
+            'text' => "El sumo es el deporte nacional de Japon",
+            'value' => '1',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 83,
+            'text' => "En golf, una yarda son 0.914",
+            'value' => '1',
+            'category_id' => '3'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 84,
+            'text' => "El libro crimen y castigo fue escrito por Tolstoi",
+            'value' => '0',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 85,
+            'text' => "Ikebana y papiroflexia, son sinonimos",
+            'value' => '0',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 86,
+            'text' => "El Coran posee 120 capitulos",
+            'value' => '0',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 87,
+            'text' => "La tragedia de Mac Beth fue inspirada en el rey de Irlanda",
+            'value' => '0',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 88,
+            'text' => "Las Meninas fueron pintadas por Monet",
+            'value' => '0',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 89,
+            'text' => "El escarabajo de oro fue una obra de Edgar Allan Poe",
+            'value' => '1',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 90,
+            'text' => "La obra 'El Capital' fue escrita por Karl Marx",
+            'value' => '1',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 91,
+            'text' => "La obra 'Las cuatro estaciones' fue escrita por Vivaldi",
+            'value' => '1',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 92,
+            'text' => "La casa de Hansel y Gretel era de Chocolate",
+            'value' => '1',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 93,
+            'text' => "El David de Miguel Angel se encuentra en Florencia",
+            'value' => '1',
+            'category_id' => '4'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 94,
+            'text' => "",
+            'value' => '0',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 95,
+            'text' => "El juego preguntados, tiene 5 categorias",
+            'value' => '0',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 96,
+            'text' => "La saga de 'El Padrino' esta compuesto por 4 partes",
+            'value' => '0',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 97,
+            'text' => "La cancion 'Firework' pertence a Taylor Swift",
+            'value' => '0',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 98,
+            'text' => "Mario y Luigi Bros eran primos ",
+            'value' => '0',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 99,
+            'text' => "Saul Hudson fue guitarrista de los Guns and Roses",
+            'value' => '1',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 100,
+            'text' => "Pete Townshend es el guitarrista de la banda 'The Who'",
+            'value' => '1',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 101,
+            'text' => "El dibujito animado 'Jay-Jay' era un avioncito",
+            'value' => '1',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 102,
+            'text' => "Los Simpsons son la mejor serie animada de la historia",
+            'value' => '1',
+            'category_id' => '5'
+        ]);
+        DB::table('questions')->insert([
+            'id' => 103,
+            'text' => "El tema 'Roxane' pertence a la banda The Police",
+            'value' => '1',
+            'category_id' => '5'
+        ]);
 
         //  LEVELS
         DB::table('levels')->insert([
