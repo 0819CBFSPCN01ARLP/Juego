@@ -55,7 +55,7 @@ class playController extends Controller
       $value=Question::find($lastQuestion)->value;  //recupero el $value de la misma (true o false)
       $level=$newGame->level_id;    //traigo nivel en el que me encuentro
       $points= Level::find($level)->score;    //traigo el score equivalente a ese nivel
-      // $answer = false;
+      $answer = false;
 
       if($value == $button){
         $newGame->points += $points;
@@ -64,8 +64,8 @@ class playController extends Controller
         $newGame->points -= ($points/3);
         if($newGame->points<0){
           $newGame->points=0;
+          $answer=false; //La respuesta fue mal contestada
         }
-        $answer=false; //La respuesta fue mal contestada
       }
       $oldScore= $user->score;     //traigo el score viejo
       if($oldScore < $newGame->points){    //comparo el viejo score con el logrado en la partida

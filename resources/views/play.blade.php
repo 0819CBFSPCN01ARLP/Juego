@@ -5,14 +5,11 @@
 @section('head')
 <link rel="stylesheet" href="/css/jugar.css">
 <script>
-
 /* document.getElementById("audioTrue").onclick = sonidoTrue;
-
     function sonidoTrue() {
       var sonido_true = document.getElementById("audioTrue");
         sonido_true.play();
      } */
-
 //ARRANCA EL TIMER
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -23,12 +20,10 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         display.textContent = minutes + ":" + seconds;
-
         if (--timer < 0) {
           clearInterval(myInterval);
           dingPrueba.play();
           var rta = $("#endgame").modal()
-          
         }
     },1000);
 }
@@ -61,7 +56,6 @@ async function pruebaV(){
     // console.log(error);
   })
 };
-
 async function pruebaF(){
   fetch("/answerQuestion/{{$newGame->id}}/0")
   .then(function(response){
@@ -73,9 +67,8 @@ async function pruebaF(){
     var sonido_true = document.getElementById("audioTrue");
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
-        document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
+        // document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
     // console.log(data)
-    // ACA IRIA EL IF ANSWER=TRUE REPRODUCIR SONIDO BIEN Y SI ES FALSE, SONIDO MAL...
     if(data.answer === false){
         sonido_false.play()//La respuesta fue bien contestada
       } else{
@@ -86,7 +79,6 @@ async function pruebaF(){
     // console.log(error);
   })
 };
-
 </script>
 
 @endsection
