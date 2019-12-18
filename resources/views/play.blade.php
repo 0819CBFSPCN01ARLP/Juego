@@ -44,8 +44,8 @@ async function pruebaV(){
     var sonido_true = document.getElementById("audioTrue");
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
-    document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
-    console.log(data)
+   // document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
+    //console.log(data)
     if(data.answer === true){
         sonido_true.play()//La respuesta fue bien contestada
       } else{
@@ -67,8 +67,8 @@ async function pruebaF(){
     var sonido_true = document.getElementById("audioTrue");
     document.querySelector("h4").innerHTML = data.question
     document.querySelector("#score").innerHTML = data.newGame.points
-        // document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
-    // console.log(data)
+    //document.querySelector("#answer").innerHTML ='ID pregunta: '+ data.newGame.last_question_id //esto es para ver abajo, despues se borra
+    //console.log(data)
     if(data.answer === false){
         sonido_false.play()//La respuesta fue bien contestada
       } else{
