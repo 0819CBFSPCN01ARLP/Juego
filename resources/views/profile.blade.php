@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title',"Profile")
+@section('title',"PROFILE")
 
 @section('head')
 <link rel="stylesheet" href="/css/perfil.css">
@@ -13,7 +13,7 @@
   <div class="card text-center">
     <div class="card-header user-img" style="font-weight:bold">
       {{-- <img src="{{((Auth::user()->avatar)==null)?"imgperfil/photo.jpg":Auth::user()->avatar}}" alt="" /> --}}
-      {{ucwords(Auth::user()->name) }} profile
+      {{ucwords(Auth::user()->name) }}'s Profile
       </div>
       @if(session('mensaje'))
         <div class="alert alert-success">
@@ -21,8 +21,8 @@
         </div>
       @endif
     <div class="card-body">
-      <h5 class="card-title">Congratulation {{ucwords(Auth::user()->name) }}!!,
-        has reached {{Auth::user()->score}} points!!</h5>
+      <h5 class="card-title">Congratulations {{ucwords(Auth::user()->name) }}!!,
+        you have reached {{Auth::user()->score}} points!!</h5>
       <div>
         <a href="/home" class="btn mt-2 mb-3 abm">Return to main page</a>
       </div>

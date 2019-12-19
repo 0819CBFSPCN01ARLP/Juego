@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title',"Register")
+@section('title',"REGISTER")
 
 @section('head')
 <link rel="stylesheet" href="/css/registro.css">

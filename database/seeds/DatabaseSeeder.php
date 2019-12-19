@@ -78,7 +78,7 @@ class DatabaseSeeder extends Seeder
          ]);
        DB::table('questions')->insert([
              'id' => 4,
-             'text' => "La capital mas al norte del planeta es Reikiavik",
+             'text' => "La capital mas al norte del planeta, es Reikiavik",
              'value' => '1',
              'category_id' => '2'
          ]);
@@ -102,7 +102,7 @@ class DatabaseSeeder extends Seeder
          ]);
        DB::table('questions')->insert([
              'id' => 8,
-             'text' => "Serbia no tiene acceso al Mar Mediterraneo",
+             'text' => "Serbia no tiene acceso al Mar Mediterráneo",
              'value' => '1',
              'category_id' => '2'
          ]);
@@ -114,25 +114,25 @@ class DatabaseSeeder extends Seeder
          ]);
        DB::table('questions')->insert([
              'id' => 10,
-             'text' => "Hay 6 oceanos en todo el mundo",
+             'text' => "Hay 6 océanos en todo el mundo",
              'value' => '0',
              'category_id' => '2'
          ]);
        DB::table('questions')->insert([
              'id' => 11,
-             'text' => "El mundo posee 5 continentes",
+             'text' => "El mundo, posee 5 continentes",
              'value' => '0',
              'category_id' => '2'
          ]);
        DB::table('questions')->insert([
              'id' => 12,
-             'text' => "El rio mas largo del mundo es el Amazonas",
+             'text' => "El río mas largo del mundo es el Amazonas",
              'value' => '0',
              'category_id' => '2'
          ]);
        DB::table('questions')->insert([
              'id' => 13,
-             'text' => "El Desierto de Gobi se encuenta en Africa",
+             'text' => "El Desierto de Gobi, se encuenta en África",
              'value' => '0',
              'category_id' => '2'
          ]);
@@ -162,19 +162,19 @@ class DatabaseSeeder extends Seeder
           ]);
          DB::table('questions')->insert([
           'id' => 18,
-          'text' => "El sol es una estrella",
+          'text' => "El Sol es una estrella",
           'value' => '1',
           'category_id' => '1'
           ]);
          DB::table('questions')->insert([
           'id' => 19,
-          'text' => "La principal funcion de los globulos rojos es coagular la sangre",
+          'text' => "La principal función de los globulos rojos, es coagular la sangre",
           'value' => '0',
           'category_id' => '1'
           ]);
          DB::table('questions')->insert([
           'id' => 20,
-          'text' => "La radiacion infrarroja produce quemaduras en la piel",
+          'text' => "La radiación infrarroja, produce quemaduras en la piel",
           'value' => '0',
           'category_id' => '1'
           ]);
@@ -222,13 +222,13 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
              'id' => 28,
-             'text' => "El estadio de futbol con mayor capacidad de LatinoAmerica es el Maracana de Brasil",
+             'text' => "El estadio de fútbol con mayor capacidad de LatinoAmérica, es el Maracaná de Brasil",
              'value' => '0',
              'category_id' => '3'
          ]);
          DB::table('questions')->insert([
              'id' => 29,
-             'text' => "El giro de Italia es una competencia de ciclismo",
+             'text' => "El giro de Italia, es una competencia de ciclismo",
              'value' => '1',
              'category_id' => '3'
          ]);
@@ -240,7 +240,7 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
              'id' => 31,
-             'text' => "El Jeet kune do fue inventado por Bruce Lee",
+             'text' => "El Jeet Kune Do fue inventado por Bruce Lee",
              'value' => '1',
              'category_id' => '3'
          ]);
@@ -252,31 +252,31 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
              'id' => 33,
-             'text' => "La seleccion Argentina jugo 4 finales del mundo en futbol",
+             'text' => "La Selección Argentina de fútbol, jugo 4 finales del mundo",
              'value' => '1',
              'category_id' => '3'
          ]);
          DB::table('questions')->insert([
              'id' => 34,
-             'text' => "Sherlock Holmes vivia en el 221B de Baker Street",
+             'text' => "Sherlock Holmes vivía en el 221B de Baker Street",
              'value' => '1',
              'category_id' => '4'
          ]);
          DB::table('questions')->insert([
              'id' => 35,
-             'text' => "El tunel fue escrito por Ernesto Sabato",
+             'text' => "'El túnel' fue escrito por Ernesto Sábato",
              'value' => '1',
              'category_id' => '4'
          ]);
          DB::table('questions')->insert([
              'id' => 36,
-             'text' => "Una prosopografia describe el fisico de una persona",
+             'text' => "Una prosopografía describe el físico de una persona",
              'value' => '1',
              'category_id' => '4'
          ]);
          DB::table('questions')->insert([
              'id' => 37,
-             'text' => "Socrates dijo: 'Solo se que no se nada'",
+             'text' => "Sócrates dijo: 'Solo se que no se nada'",
              'value' => '1',
              'category_id' => '4'
          ]);
@@ -294,37 +294,37 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
              'id' => 40,
-             'text' => "Un saxofon esta hecho de cobre",
+             'text' => "Un saxofón esta hecho de cobre",
              'value' => '0',
              'category_id' => '4'
          ]);
          DB::table('questions')->insert([
              'id' => 41,
-             'text' => "Steve Vai es el guitarrista de la banda Chickenfoot",
+             'text' => "Steve Vai es el guitarrista de la banda 'Chickenfoot'",
              'value' => '0',
              'category_id' => '4'
          ]);
          DB::table('questions')->insert([
              'id' => 42,
-             'text' => "El museo Domus, esta ubicado en San Sebastian",
+             'text' => "El museo Domus, está ubicado en San Sebastián",
              'value' => '0',
              'category_id' => '4'
          ]);
          DB::table('questions')->insert([
              'id' => 43,
-             'text' => "La cancion Maldito Duende, es de la banda española Baron Rojo",
+             'text' => "La canción 'Maldito Duende', es de la banda española Barón Rojo",
              'value' => '0',
              'category_id' => '4'
          ]);
          DB::table('questions')->insert([
              'id' => 44,
-             'text' => "Twitter se fundo en el año 2005",
+             'text' => "Twitter se fundó en el año 2005",
              'value' => '0',
              'category_id' => '5'
          ]);
          DB::table('questions')->insert([
              'id' => 45,
-             'text' => "John Lennon nacio en Londres",
+             'text' => "John Lennon nació en Londres",
              'value' => '0',
              'category_id' => '5'
          ]);
@@ -342,7 +342,7 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
              'id' => 48,
-             'text' => "Jafar es un personaje del Rey Leon",
+             'text' => "Jafar es un personaje del Rey León",
              'value' => '0',
              'category_id' => '5'
          ]);
@@ -354,7 +354,7 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
              'id' => 50,
-             'text' => "La cancion 'Un mundo ideal' es de Aladdin",
+             'text' => "La canción 'Un mundo ideal' es de Aladdin",
              'value' => '1',
              'category_id' => '5'
          ]);
@@ -366,7 +366,7 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
              'id' => 52,
-             'text' => "Pinocho se estreno en 1940",
+             'text' => "Pinocho se estrenó en 1940",
              'value' => '1',
              'category_id' => '5'
          ]);
@@ -378,25 +378,25 @@ class DatabaseSeeder extends Seeder
          ]);
          DB::table('questions')->insert([
             'id' => 54,
-            'text' => "La principical funcion del intestino grueso es la absorcion de nutrientes",
+            'text' => "La principal función del intestino grueso es la absorción de nutrientes",
             'value' => '0',
             'category_id' => '1'
         ]);
          DB::table('questions')->insert([
             'id' => 55,
-            'text' => "La sublimacion es el paso del estado gaseoso al estado solido",
+            'text' => "La sublimación, es el paso del estado gaseoso al estado sólido",
             'value' => '0',
             'category_id' => '1'
         ]);
          DB::table('questions')->insert([
             'id' => 56,
-            'text' => "La bilis es segregada por el pancreas",
+            'text' => "La bilis es segregada por el páncreas",
             'value' => '0',
             'category_id' => '1'
         ]);
          DB::table('questions')->insert([
             'id' => 57,
-            'text' => "La sacarina se saca del azucar",
+            'text' => "La sacarina se saca del azúcar",
             'value' => '0',
             'category_id' => '1'
         ]);
@@ -408,19 +408,19 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 59,
-            'text' => "El calostro se denomina a la primer leche materna",
+            'text' => "Se denomina calostro, a la primer leche materna",
             'value' => '1',
             'category_id' => '1'
         ]);
         DB::table('questions')->insert([
             'id' => 60,
-            'text' => "El hueso mas pequeño del cuerpo humano es el estribo",
+            'text' => "El hueso más pequeño del cuerpo humano, es el estribo",
             'value' => '1',
             'category_id' => '1'
         ]);
         DB::table('questions')->insert([
             'id' => 61,
-            'text' => "El estudio de los peces se denomina ictiologia",
+            'text' => "El estudio de los peces se denomina ictiología",
             'value' => '1',
             'category_id' => '1'
         ]);
@@ -432,7 +432,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 63,
-            'text' => "El nivel mas alto del mar es denominado pleamar",
+            'text' => "El nivel mas alto del mar se denomina Pleamar",
             'value' => '1',
             'category_id' => '1'
         ]);
@@ -450,7 +450,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 66,
-            'text' => "El rio Segura, desemboca en el mar Cantabrico",
+            'text' => "El rio Segura, desemboca en el mar Cantábrico",
             'value' => '0',
             'category_id' => '2'
         ]);
@@ -468,7 +468,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 69,
-            'text' => "El ingles, es el idioma oficial de Ghana",
+            'text' => "El ingleé, es el idioma oficial de Ghana",
             'value' => '1',
             'category_id' => '2'
         ]);
@@ -486,7 +486,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 72,
-            'text' => "La bandera de china tiene 5 estrellas",
+            'text' => "La bandera de China tiene 5 estrellas",
             'value' => '1',
             'category_id' => '2'
         ]);
@@ -498,7 +498,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 74,
-            'text' => "Fernando Alonso gano 4 mundiales consecutivos de F1",
+            'text' => "Fernando Alonso ganó 4 mundiales consecutivos de F1",
             'value' => '0',
             'category_id' => '3'
         ]);
@@ -516,19 +516,19 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 77,
-            'text' => "Brasil fue subcampeon en el mundial de futbol Corea-Japon de 2002",
+            'text' => "Brasil fue subcampeón en el mundial de fútbol Corea-Japon de 2002",
             'value' => '0',
             'category_id' => '3'
         ]);
         DB::table('questions')->insert([
             'id' => 78,
-            'text' => "Fernando Hierro es el jugador con mayor presencias en la Seleccion Española",
+            'text' => "Fernando Hierro es el jugador con mayor presencias en la Selección Española",
             'value' => '0',
             'category_id' => '3'
         ]);
         DB::table('questions')->insert([
             'id' => 79,
-            'text' => "La ultima prueba de un decatlon son los 1500 metros",
+            'text' => "La última prueba de un Decatlón son los 1500 metros",
             'value' => '1',
             'category_id' => '3'
         ]);
@@ -540,55 +540,55 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 81,
-            'text' => "Los juegos olimpicos de 2016 se realizaron en Rio",
+            'text' => "Los JJ.OO de 2016 se realizaron en Río",
             'value' => '1',
             'category_id' => '3'
         ]);
         DB::table('questions')->insert([
             'id' => 82,
-            'text' => "El sumo es el deporte nacional de Japon",
+            'text' => "El Sumo es el deporte nacional de Japón",
             'value' => '1',
             'category_id' => '3'
         ]);
         DB::table('questions')->insert([
             'id' => 83,
-            'text' => "En golf, una yarda son 0.914",
+            'text' => "En golf, 1 yarda son 0.914 metros",
             'value' => '1',
             'category_id' => '3'
         ]);
         DB::table('questions')->insert([
             'id' => 84,
-            'text' => "El libro crimen y castigo fue escrito por Tolstoi",
+            'text' => "El libro 'Crimen y Castigo' fue escrito por Tolstoi",
             'value' => '0',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 85,
-            'text' => "Ikebana y papiroflexia, son sinonimos",
+            'text' => "Ikebana y Papiroflexia, son sinónimos",
             'value' => '0',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 86,
-            'text' => "El Coran posee 120 capitulos",
+            'text' => "El Corán posee 120 capítulos",
             'value' => '0',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 87,
-            'text' => "La tragedia de Mac Beth fue inspirada en el rey de Irlanda",
+            'text' => "La tragedia de Mac Beth fue inspirada en el Rey de Irlanda",
             'value' => '0',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 88,
-            'text' => "Las Meninas fueron pintadas por Monet",
+            'text' => "'Las Meninas' fueron pintadas por Monet",
             'value' => '0',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 89,
-            'text' => "El escarabajo de oro fue una obra de Edgar Allan Poe",
+            'text' => "'El escarabajo de oro' fue una obra de Edgar Allan Poe",
             'value' => '1',
             'category_id' => '4'
         ]);
@@ -600,43 +600,43 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 91,
-            'text' => "La obra 'Las cuatro estaciones' fue escrita por Vivaldi",
+            'text' => "La obra musical 'Las cuatro estaciones' fue escrita por Vivaldi",
             'value' => '1',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 92,
-            'text' => "La casa de Hansel y Gretel era de Chocolate",
+            'text' => "La casa de Hansel y Gretel era de chocolate",
             'value' => '1',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 93,
-            'text' => "El David de Miguel Angel se encuentra en Florencia",
+            'text' => "'El David' de Miguel Ángel se encuentra en Florencia",
             'value' => '1',
             'category_id' => '4'
         ]);
         DB::table('questions')->insert([
             'id' => 94,
-            'text' => "",
+            'text' => "Carlos Regazzoni es un importante pintor argentino",
             'value' => '0',
             'category_id' => '5'
         ]);
         DB::table('questions')->insert([
             'id' => 95,
-            'text' => "El juego preguntados, tiene 5 categorias",
+            'text' => "El juego 'Preguntados', tiene 5 categorías",
             'value' => '0',
             'category_id' => '5'
         ]);
         DB::table('questions')->insert([
             'id' => 96,
-            'text' => "La saga de 'El Padrino' esta compuesto por 4 partes",
+            'text' => "La saga de 'El Padrino' esta compuesta por 4 partes",
             'value' => '0',
             'category_id' => '5'
         ]);
         DB::table('questions')->insert([
             'id' => 97,
-            'text' => "La cancion 'Firework' pertence a Taylor Swift",
+            'text' => "La canción 'Firework' pertence a Taylor Swift",
             'value' => '0',
             'category_id' => '5'
         ]);
@@ -648,7 +648,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 99,
-            'text' => "Saul Hudson fue guitarrista de los Guns and Roses",
+            'text' => "Saúl Hudson fue guitarrista de los Guns 'n Roses",
             'value' => '1',
             'category_id' => '5'
         ]);
@@ -660,7 +660,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 101,
-            'text' => "El dibujito animado 'Jay-Jay' era un avioncito",
+            'text' => "El dibujito animado 'Jay-Jay' es un avioncito",
             'value' => '1',
             'category_id' => '5'
         ]);
@@ -672,7 +672,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 103,
-            'text' => "El tema 'Roxane' pertence a la banda The Police",
+            'text' => "El tema 'Roxanne' pertence a la banda 'The Police'",
             'value' => '1',
             'category_id' => '5'
         ]);

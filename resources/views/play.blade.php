@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title',"Play")
+@section('title',"PLAY")
 
 @section('head')
 <link rel="stylesheet" href="/css/jugar.css">
@@ -28,7 +28,7 @@ function startTimer(duration, display) {
     },1000);
 }
 window.onload = function () {
-    var oneMinute = 59 * 1,
+    var oneMinute = 5 * 1,
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
   };
@@ -84,7 +84,26 @@ async function pruebaF(){
 @endsection
 
 @section('content')
-  <div class="modal" tabindex="-1" role="dialog" id="endgame">
+  <div class="modal fade" tabindex="-1" role="dialog" id="endgame" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">TIME'S UP!!!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to play again?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark"><a href="/play" style="color:white">Yes!!!!</a></button>
+          <button type="button" class="btn btn-dark"><a href="/ranking" style="color:white">No,ranking please</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{-- <div class="modal" tabindex="-1" role="dialog" id="endgame">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -102,7 +121,7 @@ async function pruebaF(){
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
   <div class="container pt-5">
       <audio id="audio" controls autoplay>
         <source type="audio/wav" src="audio/principal.wav">

@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title',"Login")
+@section('title',"LOGIN")
 
 @section('head')
 <link rel="stylesheet" href="/css/login.css">

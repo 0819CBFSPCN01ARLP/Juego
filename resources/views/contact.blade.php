@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title',"Contact")
+@section('title',"CONTACT")
 
 @section('head')
 <link rel="stylesheet" href="/css/contacto.css">

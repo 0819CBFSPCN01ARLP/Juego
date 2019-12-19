@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title',"Index")
+@section('title',"VERDADERO O FALSO?")
 
 @section('head')
 <link rel="stylesheet" href="/css/index.css">
