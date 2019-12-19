@@ -468,7 +468,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('questions')->insert([
             'id' => 69,
-            'text' => "El ingleé, es el idioma oficial de Ghana",
+            'text' => "El inglés, es el idioma oficial de Ghana",
             'value' => '1',
             'category_id' => '2'
         ]);
@@ -676,17 +676,23 @@ class DatabaseSeeder extends Seeder
             'value' => '1',
             'category_id' => '5'
         ]);
+        DB::table('questions')->insert([
+            'id' => 104,
+            'text' => "Hoy entregamos el proyecto y se sale fuerte!!",
+            'value' => '1',
+            'category_id' => '5'
+        ]);
 
         //  LEVELS
         DB::table('levels')->insert([
           'id' => 1,
           'time' => 60,
-          'score' => 30,
+          'score' => 50,
         ]);
         DB::table('levels')->insert([
             'id' => 2,
             'time' => 40,
-            'score' => 60,
+            'score' => 100,
         ]);
   }
 }

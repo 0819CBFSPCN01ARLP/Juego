@@ -61,7 +61,7 @@ class playController extends Controller
         $newGame->points += $points;
         $answer=true; //La respuesta fue bien contestada
       } else{
-        $newGame->points -= ($points/3);
+        $newGame->points -= ($points/2);
         if($newGame->points<0){
           $newGame->points=0;
           $answer=false; //La respuesta fue mal contestada
