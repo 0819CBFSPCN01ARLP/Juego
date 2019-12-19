@@ -28,7 +28,7 @@ function startTimer(duration, display) {
     },1000);
 }
 window.onload = function () {
-    var oneMinute = 5 * 1,
+    var oneMinute = 59 * 1,
         display = document.querySelector('#time');
     startTimer(oneMinute, display);
   };
